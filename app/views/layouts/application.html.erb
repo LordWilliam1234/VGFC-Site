@@ -7,8 +7,13 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
 <%= yield %>
 
 </body>
+<footer>
+<br>
+<% if request.original_fullpath != "/" %>
+<%= link_to "Home Page", "/" %>
+<% end %>
+</footer>
 </html>

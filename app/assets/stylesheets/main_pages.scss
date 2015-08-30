@@ -21,14 +21,28 @@ h2 {
   font-size: 3em;
 }
 
-#HomeNav {
-  background-color: silver;
+nav {
+  background-color: rgb(40, 40, 40);
   font-family: 'Times New Roman', sans-serif;
-  text-indent: 1em;
+  color: white;
+  text-decoration: none;
+  padding-left: 1em;
+  height: 1.4em;
+}
+
+.navlink {
+  text-decoration: none;
+  color: white;
+}
+
+.navlink:hover {
+  color: rgb(128, 128, 128);
 }
 
 #OtherNav {
-  background-color: silver;
-  font-family: 'Times New Roman', sans-serif;
   width: 25em;
+}
+
+.MainImg {
+  text-align: center;
 }

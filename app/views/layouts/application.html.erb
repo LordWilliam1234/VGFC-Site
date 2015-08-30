@@ -9,16 +9,15 @@
 
 <% if request.original_fullpath == "/" %>
   <nav id="HomeNav">
-  <a href="/#Char">Characters</a>
+  <a href="/#Char" class="navlink">Characters</a>
   </nav>
 <% end %>
 
-</nav>
 <body>
 <% if request.original_fullpath != "/" %>
   <%= link_to image_tag("http://i.imgur.com/ZUmBmmA.png"), "/" %>
   <nav id="OtherNav">
-  <a href="/#Char">Characters</a>
+  <a href="/#Char" class="navlink">Characters</a>
   </nav>
 <% end %>
 <br>

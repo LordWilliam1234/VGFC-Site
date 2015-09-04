@@ -30,6 +30,14 @@ nav {
   height: 1.4em;
 }
 
+.mainlink {
+  color: rgb(98, 192, 249);
+}
+
+.mainlink:hover {
+  color: rgb(9, 82, 142);
+}
+
 .navlink {
   text-decoration: none;
   color: white;

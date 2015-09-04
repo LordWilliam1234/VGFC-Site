@@ -9,15 +9,27 @@
 
 <% if request.original_fullpath == "/" %>
   <nav id="HomeNav">
-  <a href="/#Char" class="navlink">Characters</a>
+  <a href="/#Char" class="navlink">Characters</a> | 
+  <a href="terminology" class="navlink">Terminology</a> | 
+  <a href="the_basics" class="navlink">The Basics</a> | 
+  <a href="universal_abilities" class="navlink">Universal Abilities</a> | 
+  <a href="selectable_mechanics" class="navlink">Selectable Mechanics</a> | 
+  <a href="game_elements" class="navlink">Game Elements</a> | 
+  <a href="version_history" class="navlink">Version History</a>
   </nav>
 <% end %>
 
 <body>
 <% if request.original_fullpath != "/" %>
-  <%= link_to image_tag("http://i.imgur.com/ZUmBmmA.png"), "/" %>
+  <%= link_to image_tag("logo.png"), "/" %>
   <nav id="OtherNav">
-  <a href="/#Char" class="navlink">Characters</a>
+  <a href="/#Char" class="navlink">Characters</a> | 
+  <a href="terminology" class="navlink">Terminology</a> | 
+  <a href="the_basics" class="navlink">The Basics</a> | 
+  <a href="universal_abilities" class="navlink">Universal Abilities</a> | 
+  <a href="selectable_mechanics" class="navlink">Selectable Mechanics</a> | 
+  <a href="game_elements" class="navlink">Game Elements</a> | 
+  <a href="version_history" class="navlink">Version History</a>
   </nav>
 <% end %>
 <br>

@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
   root 'main_pages#home'
-  get 'fighters/ryu' => 'fighters#ryu'
-  get 'fighters/kim' => 'fighters#kim'
+  get 'ryu' => 'fighters#ryu'
+  get 'kim' => 'fighters#kim'
 end

@@ -2,10 +2,14 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
 body {
   background-color: rgb(20, 20, 20);
   color: white;
   font-family: 'Times New Roman', sans-serif;
+  font-size: 16px;
 }
 
 h1 {
@@ -22,29 +26,28 @@ h2 {
 }
 
 nav {
+  float: center;
+  text-align: center;
   background-color: rgb(40, 40, 40);
   font-family: 'Times New Roman', sans-serif;
   color: white;
   text-decoration: none;
-  padding-left: 1em;
-  height: 1.4em;
 }
 
 .mainlink {
   color: rgb(98, 192, 249);
-}
-
-.mainlink:hover {
-  color: rgb(9, 82, 142);
+  &:hover {
+    color: rgb(9, 82, 142);
+  }
 }
 
 .navlink {
   text-decoration: none;
   color: white;
-}
-
-.navlink:hover {
-  color: rgb(128, 128, 128);
+  &:hover {
+    color: rgb(128, 128, 128);
+    text-decoration: none;
+  }
 }
 
 #OtherNav {

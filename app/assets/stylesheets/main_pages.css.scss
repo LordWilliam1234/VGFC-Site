@@ -24,7 +24,21 @@ h1 {
 }
 
 h2 {
-  font-size: 1.5em;
+  font-size: 1.6em;
+  min-width: 1120px;
+}
+
+#Char {
+  min_width: 0px;
+}
+
+h3 {
+  font-size: 1.3em;
+  min-width: 1120px;
+}
+
+p {
+  min-width: 500px;
 }
 
 #gametitle, #Char, #Term, #Systems, #Basics, #Abilities, #Select, #Elements, #Version {
@@ -36,6 +50,52 @@ h2 {
   font-size: 3em;
 }
 
+#gamedesc {
+  min-height: 120px;
+}
+
+#characters {
+  display: block;
+  margin-left: 3em;
+  min-width: 100%;
+  .charnames1 {
+    display: block;
+    padding-top: 0.5em;
+    position: absolute;
+    left: 23em;
+    width: 130px;
+  }
+  .charnames2 {
+    display: block;
+    padding-top: 0.5em;
+    position: absolute;
+    left: 34em;
+    width: 130px;
+  }
+  .charnames3 {
+    display: block;
+    padding-top: 0.5em;
+    position: absolute;
+    left: 45em;
+    width: 130px;
+  }
+  .charnames4 {
+    display: block;
+    padding-top: 0.5em;
+    position: absolute;
+    left: 56em;
+    width: 130px;
+  }
+  .charnames5 {
+    display: block;
+    padding-top: 0.5em;
+    position: absolute;
+    left: 67em;
+    width: 130px;
+  }
+
+}
+
 nav {
   float: center;
   text-align: center;
@@ -45,13 +105,28 @@ nav {
   text-decoration: none;
   padding-top: 0.5em;
   padding-bottom: 0.5em;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
   background-color: rgba(10, 10, 10, 0.5);
 }
 
 .mainlink {
   color: rgb(98, 192, 249);
+  &:visited {
+    color: rgb(150, 56, 142);
+  }
   &:hover {
     color: rgb(9, 82, 142);
+    text-decoration: underline;
+  }
+}
+
+.badlink {
+  color: rgb(200, 0, 0);
+  text-decoration: none;
+  &:hover {
+    color: rgb(150, 0, 0);
+    text-decoration: none;
   }
 }
 
@@ -82,6 +157,7 @@ nav {
 }
 
 .HomeNav {
+  display: block;
   margin-left: 1em;
   margin-right: 0em;
   margin-bottom: 1em;

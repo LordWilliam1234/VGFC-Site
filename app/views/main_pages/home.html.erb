@@ -17,121 +17,246 @@ Navigation
 </div>
 
 <h1 id="gametitle">VGFC - Worlds Collide</h1>
-<p>It's not good enough just to be the greatest fighter in your world. It's time you proved yourself to be the greatest fighter across <strong>all</strong> worlds. Characters from various different universes have joined together to prove themselves to be the best. Who will come out on top?</p>
+<p id="gamedesc">It's not good enough just to be the greatest fighter in your world. It's time you proved yourself to be the greatest fighter across <strong>all</strong> worlds. Characters from various different universes have joined together to prove themselves to be the best. Who will come out on top?</p>
 
 <h2 id="Char">Characters</h2>
 
-<div class="charicons">
-<%= link_to image_tag("ryu.png", alt: "Ryu"), ryu_path %>
-<%= link_to image_tag("kim.png", alt: "Kim"), kim_path %>
-<%= link_to image_tag("ken.png", alt: "Ken"), '#' %>
-<%= link_to image_tag("kyo.png", alt: "Kyo"), '#' %>
-<%= link_to image_tag("guile.png", alt: "Guile"), '#' %>
-<%= link_to image_tag("ryo.png", alt: "Ryo"), '#' %>
-<%= link_to image_tag("haggar.png", alt: "Haggar"), '#' %>
-<%= link_to image_tag("terry.png", alt: "Terry"), '#' %>
-<%= link_to image_tag("makoto.png", alt: "Makoto"), '#' %>
-<%= link_to image_tag("jin.png", alt: "Jin"), '#' %>
-<%= link_to image_tag("sakura.png", alt: "Sakura"), '#' %>
-<%= link_to image_tag("kazuya.png", alt: "Kazuya"), '#' %>
-<%= image_tag("karin.png", alt: "Karin") %>
-<%= image_tag("haohmaru.png", alt: "Haohmaru") %>
-<%= image_tag("dan.png", alt: "Dan") %>
-<%= image_tag("hibiki.png", alt: "Hibiki") %>
-<%= image_tag("megaman.png", alt: "Megaman") %>
-<%= image_tag("klonoa.png", alt: "Klonoa") %>
-<%= image_tag("chun.png", alt: "Chun-li") %>
-<%= image_tag("joe.png", alt: "Joe") %>
-<%= image_tag("dudley.png", alt: "Dudley") %>
-<%= image_tag("lucario.png", alt: "Lucario") %>
-<%= image_tag("yang.png", alt: "Yang") %>
-<%= image_tag("blaziken.png", alt: "Blaziken") %>
-<%= image_tag("yun.png", alt: "Yun") %>
-<%= image_tag("mario.png", alt: "Mario") %>
-<%= image_tag("jill.png", alt: "Jill") %>
-<%= image_tag("yoshi.png", alt: "Yoshi") %>
-<%= image_tag("akuma.png", alt: "Akuma") %>
-<%= image_tag("gengar.png", alt: "Gengar") %>
-<%= image_tag("talbain.png", alt: "Talbain") %>
-<%= image_tag("sonic.png", alt: "Sonic") %>
-<%= image_tag("guy.png", alt: "Guy") %>
-<%= image_tag("rock.png", alt: "Rock") %>
-<%= image_tag("rolento.png", alt: "Rolento") %>
-<%= image_tag("geese.png", alt: "Geese") %>
-<%= image_tag("sagat.png", alt: "Sagat") %>
-<%= image_tag("ryuji.png", alt: "Ryuji") %>
-<%= image_tag("rose.png", alt: "Rose") %>
-<%= image_tag("yuri.png", alt: "Yuri") %>
-<%= image_tag("zangief.png", alt: "Zangief") %>
-<%= image_tag("link.png", alt: "Link") %>
-<%= image_tag("ibuki.png", alt: "Ibuki") %>
-<%= image_tag("snake.png", alt: "Snake") %>
-<%= image_tag("hawk.png", alt: "T. Hawk") %>
-<%= image_tag("athena.png", alt: "Athena") %>
-<%= image_tag("bison.png", alt: "Bison") %>
-<%= image_tag("nakoruru.png", alt: "Nakoruru") %>
-<%= image_tag("commando.png", alt: "Commando") %>
-<%= image_tag("squall.png", alt: "Squall") %>
-<%= image_tag("applejack.png", alt: "Applejack") %>
-<%= image_tag("zero.png", alt: "Zero") %>
-<%= image_tag("twilight.png", alt: "Twilight") %>
-<%= image_tag("gouken.png", alt: "Gouken") %>
-<%= image_tag("pinkie.png", alt: "Pinkie") %>
-<%= image_tag("elena.png", alt: "Elena") %>
-<%= image_tag("rarity.png", alt: "Rarity") %>
-<%= image_tag("cammy.png", alt: "Cammy") %>
-<%= image_tag("kula.png", alt: "Kula") %>
-<%= image_tag("sonson.png", alt: "Sonson") %>
-<%= image_tag("iori.png", alt: "Iori") %>
-<%= image_tag("ingrid.png", alt: "Ingrid") %>
-<%= image_tag("kyosuke.png", alt: "Kyosuke") %>
-<%= image_tag("fluttershy.png", alt: "Fluttershy") %>
-<%= image_tag("juri.png", alt: "Juri") %>
-<%= image_tag("rainbow.png", alt: "Rainbow") %>
-<%= image_tag("eryu.png", alt: "Evil Ryu") %>
-<%= image_tag("king.png", alt: "King") %>
-<%= image_tag("decapre.png", alt: "Decapre") %>
-<%= image_tag("gardevoir.png", alt: "Gardevoir") %>
-<%= image_tag("maki.png", alt: "Maki") %>
-<%= image_tag("rugal.png", alt: "Rugal") %>
-<%= image_tag("hugo.png", alt: "Hugo") %>
-<%= image_tag("grugal.png", alt: "God Rugal") %>
-<%= image_tag("vken.png", alt: "Violent Ken") %>
-<%= image_tag("zargojack.png", alt: "Zargojack") %>
-<%= image_tag("sakuma.png", alt: "Shin Akuma") %>
-<%= image_tag("oiori.png", alt: "Orochi Iori") %>
+<div id="characters">
+  <div class="charnames1">
+  <ul>
+  <li><%= link_to "Ryu", ryu_path, :class => "mainlink" %></li>
+  <li><%= link_to "Ken", '#', :class => "badlink" %> </li>
+  <li><%= link_to "Guile", '#', :class => "badlink" %> </li>
+  <li><%= link_to "Mike Haggar", '#', :class => "badlink" %> </li>
+  <li><%= link_to "Makoto", '#', :class => "badlink" %> </li>
+  <li><%= link_to "Sakura", '#', :class => "badlink" %> </li>
+  <li><%= link_to "Karin", '#', :class => "badlink" %> </li>
+  <li><%= link_to "Dan", '#', :class => "badlink" %> </li>
+  <li><%= link_to "Megaman", '#', :class => "badlink" %> </li>
+  <li><%= link_to "Chun-li", '#', :class => "badlink" %> </li>
+  <li><%= link_to "Dudley", '#', :class => "badlink" %> </li>
+  <li><%= link_to "Yang", '#', :class => "badlink" %> </li>
+  <li><%= link_to "Yun", '#', :class => "badlink" %> </li>
+  <li><%= link_to "Jill Valentine", '#', :class => "badlink" %> </li>
+  <li><%= link_to "Akuma", '#', :class => "badlink" %> </li>
+  <li><%= link_to "Jon Talbain", '#', :class => "badlink" %></li>
+  </ul>
+  </div>
+  <div class="charnames2">
+  <li><%= link_to "Guy", '#', :class => "badlink" %> </li>
+  <li><%= link_to "Rolento", '#', :class => "badlink" %> </li>
+  <li><%= link_to "Sagat", '#', :class => "badlink" %> </li>
+  <li><%= link_to "Rose", '#', :class => "badlink" %> </li>
+  <li><%= link_to "Zangief", '#', :class => "badlink" %> </li>
+  <li><%= link_to "Ibuki", '#', :class => "badlink" %> </li>
+  <li><%= link_to "T. Hawk", '#', :class => "badlink" %> </li>
+  <li><%= link_to "M. Bison", '#', :class => "badlink" %> </li>
+  <li><%= link_to "C. Commando", '#', :class => "badlink" %> </li>
+  <li><%= link_to "Zero", '#', :class => "badlink" %> </li>
+  <li><%= link_to "Gouken", '#', :class => "badlink" %> </li>
+  <li><%= link_to "Elena", '#', :class => "badlink" %> </li>
+  <li><%= link_to "Cammy", '#', :class => "badlink" %> </li>
+  <li><%= link_to "SonSon", '#', :class => "badlink" %> </li>
+  <li><%= link_to "Ingrid", '#', :class => "badlink" %> </li>
+  <li><%= link_to "Kyosuke", '#', :class => "badlink" %> </li>
+  </div>
+  <div class="charnames3">
+  <li><%= link_to "Decapre", '#', :class => "badlink" %> </li>
+  <li><%= link_to "Juri", '#', :class => "badlink" %> </li>
+  <li><%= link_to "Maki", '#', :class => "badlink" %> </li>
+  <li><%= link_to "Hugo", '#', :class => "badlink" %> </li>
+  <li><%= link_to "Evil Ryu", '#', :class => "badlink" %> </li>
+  <li><%= link_to "Violent Ken", '#', :class => "badlink" %> </li>
+  <li><%= link_to "Shin Akuma", '#', :class => "badlink" %> </li>
+  <li><%= link_to "Kim", kim_path, :class => "mainlink" %> </li>
+  <li><%= link_to "Kyo", '#', :class => "badlink" %> </li>
+  <li><%= link_to "Ryo", '#', :class => "badlink" %> </li>
+  <li><%= link_to "Terry", '#', :class => "badlink" %> </li>
+  <li><%= link_to "Jin", '#', :class => "badlink" %> </li>
+  <li><%= link_to "Kazuya", '#', :class => "badlink" %> </li>
+  <li><%= link_to "Haohmaru", '#', :class => "badlink" %> </li>
+  <li><%= link_to "Hibiki", '#', :class => "badlink" %> </li>
+  <li><%= link_to "Klonoa", '#', :class => "badlink" %> </li>
+  </div>
+  <div class="charnames4">
+  <li><%= link_to "Joe", '#', :class => "badlink" %> </li>
+  <li><%= link_to "Lucario", '#', :class => "badlink" %> </li>
+  <li><%= link_to "Blaziken", '#', :class => "badlink" %> </li>
+  <li><%= link_to "Mario", '#', :class => "badlink" %> </li>
+  <li><%= link_to "Yoshi", '#', :class => "badlink" %> </li>
+  <li><%= link_to "Gengar", '#', :class => "badlink" %> </li>
+  <li><%= link_to "Sonic", '#', :class => "badlink" %> </li>
+  <li><%= link_to "Rock Howard", '#', :class => "badlink" %> </li>
+  <li><%= link_to "Geese Howard", '#', :class => "badlink" %> </li>
+  <li><%= link_to "Ryuji", '#', :class => "badlink" %> </li>
+  <li><%= link_to "Yuri", '#', :class => "badlink" %> </li>
+  <li><%= link_to "Link", '#', :class => "badlink" %> </li>
+  <li><%= link_to "Snake", '#', :class => "badlink" %> </li>
+  <li><%= link_to "Athena", '#', :class => "badlink" %> </li>
+  <li><%= link_to "Nakoruru", '#', :class => "badlink" %> </li>
+  <li><%= link_to "Squall", '#', :class => "badlink" %> </li>
+  </div>
+  <div class="charnames5">
+  <li><%= link_to "Applejack", '#', :class => "badlink" %> </li>
+  <li><%= link_to "Twilight", '#', :class => "badlink" %> </li>
+  <li><%= link_to "Pinkie", '#', :class => "badlink" %> </li>
+  <li><%= link_to "Rarity", '#', :class => "badlink" %> </li>
+  <li><%= link_to "Kula", '#', :class => "badlink" %> </li>
+  <li><%= link_to "Iori", '#', :class => "badlink" %> </li>
+  <li><%= link_to "Rainbow", '#', :class => "badlink" %> </li>
+  <li><%= link_to "Fluttershy", '#', :class => "badlink" %> </li>
+  <li><%= link_to "King", '#', :class => "badlink" %> </li>
+  <li><%= link_to "Gardevoir", '#', :class => "badlink" %> </li>
+  <li><%= link_to "Rugal", '#', :class => "badlink" %> </li>
+  <li><%= link_to "O. Iori", '#', :class => "badlink" %> </li>
+  <li><%= link_to "Zargojack", '#', :class => "badlink" %> </li>
+  <li><%= link_to "God Rugal", '#', :class => "badlink" %> </li>
+  </div>
+
+<table>
+<tr>
+  <th></th>
+  <th><%= image_tag("megaman.png", alt: "Megaman") %></th>
+  <th><%= image_tag("zero.png", alt: "Zero") %></th>
+  <th><%= image_tag("talbain.png", alt: "Talbain") %></th>
+  <th><%= image_tag("rarity.png", alt: "Rarity") %></th>
+  <th><%= image_tag("pinkie.png", alt: "Pinkie") %></th>
+  <th><%= image_tag("fluttershy.png", alt: "Fluttershy") %></th>
+  <th></th>
+</tr>
+<tr>
+  <th></th>
+  <th><%= image_tag("jill.png", alt: "Jill") %></th>
+  <th><%= image_tag("commando.png", alt: "Commando") %></th>
+  <th><%= image_tag("sonson.png", alt: "Sonson") %></th>
+  <th><%= image_tag("twilight.png", alt: "Twilight") %></th>
+  <th><%= image_tag("applejack.png", alt: "Applejack") %></th>
+  <th><%= image_tag("rainbow.png", alt: "Rainbow") %></th>
+  <th></th>
+</tr>
+<tr>
+  <th></th>
+  <th><%= image_tag("haggar.png", alt: "Haggar") %></th>
+  <th><%= image_tag("maki.png", alt: "Maki") %></th>
+  <th><%= image_tag("guy.png", alt: "Guy") %></th>
+  <th><%= image_tag("blaziken.png", alt: "Blaziken") %></th>
+  <th><%= image_tag("gardevoir.png", alt: "Gardevoir") %></th>
+  <th><%= image_tag("gengar.png", alt: "Gengar") %></th>
+  <th></th>
+</tr>
+<tr>
+  <th></th>
+  <th><%= image_tag("ingrid.png", alt: "Ingrid") %></th>
+  <th><%= image_tag("sakura.png", alt: "Sakura") %></th>
+  <th><%= image_tag("rolento.png", alt: "Rolento") %></th>
+  <th><%= image_tag("mario.png", alt: "Mario") %></th>
+  <th><%= image_tag("link.png", alt: "Link") %></th>
+  <th><%= image_tag("lucario.png", alt: "Lucario") %></th>
+  <th></th>
+</tr>
+<tr>
+  <th><%= image_tag("eryu.png", alt: "Evil Ryu") %></th>
+  <th><%= image_tag("karin.png", alt: "Karin") %></th>
+  <th><%= image_tag("dan.png", alt: "Dan") %></th>
+  <th><%= image_tag("rose.png", alt: "Rose") %></th>
+  <th><%= image_tag("klonoa.png", alt: "Klonoa") %></th>
+  <th><%= image_tag("sonic.png", alt: "Sonic") %></th>
+  <th><%= image_tag("yoshi.png", alt: "Yoshi") %></th>
+  <th><%= image_tag("zargojack.png", alt: "Zargojack") %></th>
+</tr>
+<tr>
+  <th><%= image_tag("vken.png", alt: "Violent Ken") %></th>
+  <th><%= image_tag("chun.png", alt: "Chun-li") %></th>
+  <th><%= image_tag("ken.png", alt: "Ken") %></th>
+  <th><%= link_to image_tag("ryu.png", alt: "Ryu"), ryu_path %></th>
+  <th><%= image_tag("kyo.png", alt: "Kyo") %></th>
+  <th><%= link_to image_tag("kim.png", alt: "Kim"), kim_path %></th>
+  <th><%= image_tag("terry.png", alt: "Terry") %></th>
+  <th><%= image_tag("grugal.png", alt: "God Rugal") %></th>
+</tr>
+<tr>
+  <th><%= image_tag("decapre.png", alt: "Decapre") %></th>
+  <th><%= image_tag("cammy.png", alt: "Cammy") %></th>
+  <th><%= image_tag("sagat.png", alt: "Sagat") %></th>
+  <th><%= image_tag("guile.png", alt: "Guile") %></th>
+  <th><%= image_tag("joe.png", alt: "Joe") %></th>
+  <th><%= image_tag("athena.png", alt: "Athena") %></th>
+  <th><%= image_tag("ryo.png", alt: "Ryo") %></th>
+  <th><%= image_tag("oiori.png", alt: "Orochi Iori") %></th>
+</tr>
+<tr>
+  <th><%= image_tag("kyosuke.png", alt: "Kyosuke") %></th>
+  <th><%= image_tag("juri.png", alt: "Juri") %></th>
+  <th><%= image_tag("hawk.png", alt: "T. Hawk") %></th>
+  <th><%= image_tag("zangief.png", alt: "Zangief") %></th>
+  <th><%= image_tag("ryuji.png", alt: "Ryuji") %></th>
+  <th><%= image_tag("rock.png", alt: "Rock") %></th>
+  <th><%= image_tag("geese.png", alt: "Geese") %></th>
+  <th><%= image_tag("rugal.png", alt: "Rugal") %></th>
+</tr>
+<tr>
+  <th><%= image_tag("sakuma.png", alt: "Shin Akuma") %></th>
+  <th><%= image_tag("gouken.png", alt: "Gouken") %></th>
+  <th><%= image_tag("akuma.png", alt: "Akuma") %></th>
+  <th><%= image_tag("bison.png", alt: "Bison") %></th>
+  <th><%= image_tag("squall.png", alt: "Squall") %></th>
+  <th><%= image_tag("snake.png", alt: "Snake") %></th>
+  <th><%= image_tag("yuri.png", alt: "Yuri") %></th>
+  <th><%= image_tag("iori.png", alt: "Iori") %></th>
+</tr>
+<tr>
+  <th><%= image_tag("hugo.png", alt: "Hugo") %></th>
+  <th><%= image_tag("dudley.png", alt: "Dudley") %></th>
+  <th><%= image_tag("yun.png", alt: "Yun") %></th>
+  <th><%= image_tag("yang.png", alt: "Yang") %></th>
+  <th><%= image_tag("jin.png", alt: "Jin") %></th>
+  <th><%= image_tag("kazuya.png", alt: "Kazuya") %></th>
+  <th><%= image_tag("kula.png", alt: "Kula") %></th>
+  <th><%= image_tag("king.png", alt: "King") %></th>
+</tr>
+<tr>
+  <th></th>
+  <th><%= image_tag("elena.png", alt: "Elena") %></th>
+  <th><%= image_tag("ibuki.png", alt: "Ibuki") %></th>
+  <th><%= image_tag("makoto.png", alt: "Makoto") %></th>
+  <th><%= image_tag("haohmaru.png", alt: "Haohmaru") %></th>
+  <th><%= image_tag("nakoruru.png", alt: "Nakoruru") %></th>
+  <th><%= image_tag("hibiki.png", alt: "Hibiki") %></th>
+  <th></th>
+</tr>
+</table>
 </div>
 
 <h2 id="Term">Terminology</h2>
 <p>Throughout the various character pages, there's going to be a lot of different terms used to describe how things work. Below you can find explanations for what these different terms mean.</p>
 <ul>
-  <li><a href="#" class="mainlink">Terminology</a></li>
+  <li><a href="#" class="badlink">Terminology</a></li>
 </ul>
 <h2 id="Systems">Game Systems</h2>
 <p>Throughout this section, there will be details on how just about everything in the game works.</p>
 <h3 id="Basics">The Basics</h3>
 <p>As the title implies, these are the very basic elements of the game. A good starting point.</p>
 <ul>
-  <li><a href="#" class="mainlink">The Basics</a></li>
+  <li><a href="#" class="badlink">The Basics</a></li>
 </ul>
 <h3 id="Abilities">Universal Abilities</h3>
 <p>These are actions that every character is able to perform, regardless of which universal mechanics you select.</p>
 <ul>
-  <li><a href="#" class="mainlink">Universal Abilities</a></li>
+  <li><a href="#" class="badlink">Universal Abilities</a></li>
 </ul>
 <h3 id="Select">Selectable Mechanics</h3>
 <p>These are the different abilities you can give a character via the game's mechanic selection, such as parries and rolls.</p>
 <ul>
-  <li><a href="#" class="mainlink">Selectable Mechanics</a></li>
+  <li><a href="#" class="badlink">Selectable Mechanics</a></li>
 </ul>
 <h3 id="Elements">Game Elements</h3>
 <p>More detailed explanations of how other elements of the game work, such as counter hits and damage scaling.</p>
 <ul>
-  <li><a href="#" class="mainlink">Game Elements</a></li>
+  <li><a href="#" class="badlink">Game Elements</a></li>
 </ul>
 <h2 id="Version">Version History</h2>
 <p>This section goes over the various different versions of the game and the many changes that the game has received with them.</p>
 <ul>
-  <li><a href="#" class="mainlink">Version History</a></li>
+  <li><a href="#" class="badlink">Version History</a></li>
 </ul>
 </div>

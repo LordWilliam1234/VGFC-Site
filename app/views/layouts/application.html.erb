@@ -8,13 +8,13 @@
 </head>
 
 <% if request.original_fullpath == "/" %>
-  <nav id="HomeNav">
-  <a href="/#Char" class="navlink">Characters</a> | 
-  <a href="#" class="navlink">Terminology</a> | 
-  <a href="#" class="navlink">The Basics</a> | 
-  <a href="#" class="navlink">Universal Abilities</a> | 
-  <a href="selectable_mechanics" class="navlink">Selectable Mechanics</a> | 
-  <a href="#" class="navlink">Game Elements</a> | 
+  <nav id="MainNav">
+  <a href="/#Char" class="navlink">Characters</a>
+  <a href="#" class="navlink">Terminology</a>
+  <a href="#" class="navlink">The Basics</a>
+  <a href="#" class="navlink">Universal Abilities</a>
+  <a href="selectable_mechanics" class="navlink">Selectable Mechanics</a>
+  <a href="#" class="navlink">Game Elements</a>
   <a href="#" class="navlink">Version History</a>
   </nav>
 <% end %>
@@ -23,12 +23,12 @@
 <% if request.original_fullpath != "/" %>
   <%= link_to image_tag("logo.png"), root_path %>
   <nav id="OtherNav">
-  <a href="/#Char" class="navlink">Characters</a> | 
-  <a href="#" class="navlink">Terminology</a> | 
-  <a href="#" class="navlink">The Basics</a> | 
-  <a href="#" class="navlink">Universal Abilities</a> | 
-  <a href="#" class="navlink">Selectable Mechanics</a> | 
-  <a href="#" class="navlink">Game Elements</a> | 
+  <a href="/#Char" class="navlink">Characters</a>
+  <a href="#" class="navlink">Terminology</a>
+  <a href="#" class="navlink">The Basics</a>
+  <a href="#" class="navlink">Universal Abilities</a>
+  <a href="#" class="navlink">Selectable Mechanics</a>
+  <a href="#" class="navlink">Game Elements</a>
   <a href="#" class="navlink">Version History</a>
   </nav>
 <% end %>

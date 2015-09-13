@@ -13,12 +13,22 @@ body {
   font-size: 16px;
 }
 
+.MainPage {
+  margin-left: 2em;
+  margin-right: 2em;
+  margin-bottom: 2em;
+}
+
 h1 {
   font-size: 2em;
 }
 
 h2 {
   font-size: 1.5em;
+}
+
+#gametitle, #Char, #Term, #Systems, #Basics, #Abilities, #Select, #Elements, #Version {
+  border-bottom: 1px solid white;
 }
 
 #gametitle {
@@ -33,6 +43,9 @@ nav {
   font-family: 'Times New Roman', sans-serif;
   color: white;
   text-decoration: none;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  background-color: rgba(10, 10, 10, 0.5);
 }
 
 .mainlink {
@@ -45,23 +58,40 @@ nav {
 .navlink {
   text-decoration: none;
   color: white;
+  border-right: 1px solid white;
+  border-left: 1px solid white;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
   &:hover {
     color: rgb(128, 128, 128);
     text-decoration: none;
+    background-color: black;
   }
 }
 
 #OtherNav {
   width: 25em;
+  margin-top: 1em;
+  padding: 0.5em 0.5em 0.5em 0.5em;
 }
 
 .MainImg {
   text-align: center;
   float: center;
+  margin-bottom: 3em;
 }
 
 .HomeNav {
-  width: 12em;
+  margin-left: 1em;
+  margin-right: 0em;
+  margin-bottom: 1em;
+  margin-top: 1em;
+  width: 13em;
   float: right;
   text-align: right;
+  background-color: rgba(5,5,5,1);
+  outline: 1px solid white;
+  padding-right: 1em;
+  padding-top: 0.5em;
+  text-decoration: underline;
 }

@@ -21,7 +21,8 @@
 
 <body>
 <% if request.original_fullpath != "/" %>
-  <%= link_to image_tag("logo.png"), root_path %>
+  <header>
+  <%= link_to image_tag("logo.png"), root_path, :class => "Logo" %>
   <nav id="OtherNav">
   <a href="/#Char" class="navlink">Characters</a>
   <a href="#" class="navlink">Terminology</a>
@@ -31,9 +32,8 @@
   <a href="#" class="navlink">Game Elements</a>
   <a href="#" class="navlink">Version History</a>
   </nav>
+  </header>
 <% end %>
-<br>
-<br>
 <%= yield %>
 
 </body>

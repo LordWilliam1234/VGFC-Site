@@ -1,9 +1,117 @@
 <% provide(:title, "Ryu") %>
-<h1>Ryu</h1>
-<%= image_tag "ryu/bust.png" %>
-<p>Insert bio here</p>
-<h2>The Basics</h2>
-<p>Basic info goes here</p>
-<h2>Move Info</h2>
-<p>Standing Light Punch</p>
-<%= image_tag "ryu/slp.png" %>
+<div id="FighterPage">
+<h1 id="Name">Ryu</h1>
+<%= image_tag "ryu/bust.png", :class => "FighterImg" %>
+<p class="Bio">Ryu is the lead protagonist and one of the main characters in the Street Fighter series of fighting games. Ryu has made an appearance in every Street Fighter game, as well as in almost every crossover fighting game to feature Capcom characters.
+<br>
+<br>
+Ryu has become the most famous character in the fighting game genre, starring in early fighting games such as Street Fighter and starting to become popular in Street Fighter II, where he was considered a "basic" character. He, along with Mega Man, is considered one of Capcom's unofficial mascots.
+<br>
+<br>
+Bio from <a href="http://streetfighter.wikia.com/wiki/Ryu" target="_blank">The Street Fighter Wiki</a>. Read more there!</p>
+<div class="MainInfo">
+<h2 id="Basics">The Basics</h2>
+<p>TBW</p>
+<h2 id="MoveInfo">Move Info</h2>
+<table class="CharMoves">
+  <tr>
+   <th>Standing Light Punch</th>
+   <td></td>
+  </tr>
+  <tr>
+    <th><%= image_tag "ryu/slp.png" %></th>
+    <td>A basic standing punch. Quick and disjointed, it's a good move to beat other standing attacks. Low risk but low reward. It doesn't hit crouching opponents.</td>
+  </tr>
+  <tr>
+    <th>Standing Light Kick</th>
+    <td></td>
+  </tr>
+  <tr>
+    <th><%= image_tag "ryu/slk.png" %></th>
+    <td>A quick kick to the ankles. Another low risk/low reward attack, this one designed to beat other low attacks, such as Ryu's own crouching light kick. It also hits as a low.</td>
+  </tr>
+  <tr>
+    <th>Standing Heavy Punch</th>
+    <td></td>
+  </tr>
+  <tr>
+    <th><%= image_tag "ryu/shp.png" %></th>
+    <td>A hard high punch. Despite how it looks, it can also hit crouching opponents. Does good damage and stun, and while it's not as disjointed as his standing light punch, it's not a bad poke by itself either. Being +6 on hit and +3 on block, it also serves well as a combo starter and a tool for frame trapping your opponent. Expect to be using this attack a lot when you go on the offensive.</td>
+  </tr>
+  <tr>
+    <th>Standing Heavy Kick</th>
+    <td></td>
+  </tr>
+  <tr>
+    <th><%= image_tag "ryu/shk.png" %></th>
+    <td>A high roundhouse kick. It's not as good of a poke as his other standing attacks, and it misses on crouching opponents, but it does the most damage and stun out of all of his normal attacks and is invincible to airborne attacks while the hitbox is active. This makes it a solid (though somewhat slow) one button anti-air.</td>
+  </tr>
+</table>
+
+<h2 id="FrameData">Frame Data</h2>
+
+<p>Health: 1000 Stun: 1000</p>
+<table class="FrameTable">
+  <tr>
+    <th>Move Name</th>
+    <th>Command</th>
+    <th>Move Type</th>
+    <th>Damage</th>
+    <th>Stun</th>
+    <th>Meter Gain (Whiff/Hit)</th>
+    <th>Start-up</th>
+    <th>Active</th>
+    <th>Recovery</th>
+    <th>Advantage (On Hit)</th>
+    <th>Advantage (On Block)</th>
+    <th>Juggle Potential</th>
+    <th>Juggle Cost</th>
+    <th>Hit Level</th>
+    <th>Cancel Ability</th>
+    <th>Move Properties</th>
+    <th>Counter-hit Properties</th>
+    <th>Other Notes</th>
+  </tr>
+  <tr>
+    <td>Standing Light Punch</td>
+    <td><%= image_tag "info/lp.png" %></td>
+    <td>Light</td>
+    <td>30</td>
+    <td>50</td>
+    <td>0/20</td>
+    <td>4</td>
+    <td>4</td>
+    <td>5</td>
+    <td>+5</td>
+    <td>+2</td>
+    <td>2</td>
+    <td>1</td>
+    <td>Mid</td>
+    <td>ch/sp/su</td>
+    <td><%= image_tag "info/rapidfire.png" %></td>
+    <td>+1 Frame Advantage</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Standing Light Kick</td>
+    <td><%= image_tag "info/lk.png" %></td>
+    <td>Light</td>
+    <td>30</td>
+    <td>50</td>
+    <td>0/20</td>
+    <td>4</td>
+    <td>5</td>
+    <td>7</td>
+    <td>+2</td>
+    <td>0</td>
+    <td>2</td>
+    <td>1</td>
+    <td>Low</td>
+    <td>ch/sp/su</td>
+    <td></td>
+    <td>+1 Frame Advantage</td>
+    <td></td>
+  </tr>
+</table>
+</div>
+</div>

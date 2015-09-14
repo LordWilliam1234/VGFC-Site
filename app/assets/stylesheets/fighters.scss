@@ -1,3 +1,83 @@
 // Place all the styles related to the fighters controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+header {
+  margin-top: 1em;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  padding-left: 1em;
+  padding-right: 1em;
+  text-align: center;
+}
+
+#OtherNav {
+  margin-top: 1em;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0.5em 0.5em 0.5em 0.5em;
+}
+
+#FighterPage {
+  margin-left: 2em;
+  margin-bottom: 2em;
+}
+
+#Name, #Basics, #MoveInfo, #FrameData {
+  border-bottom: 1px solid white;
+}
+
+#Name {
+  font-family: 'Impact', sans-serif;
+}
+
+.FighterImg {
+  display: block;
+  float: left;
+  padding-right: 1em;
+  padding-bottom: 0em;
+}
+
+.Bio {
+  max-width: 50em;
+  padding-right: 1em;
+}
+
+.MainInfo {
+  display: block;
+  clear: left;
+}
+
+table.CharMoves {
+  border: 1px solid gray;
+  background-color: rgba(0,0,0,0.5);
+  margin-right: 2em;
+  max-width: 2000px;
+  td {
+    padding-left: 1em;
+    padding-right: 1em;
+    border: 1px solid gray;
+  }
+  th {
+    text-align: center;
+    border: 1px solid gray;
+  }
+}
+
+table.FrameTable {
+  border: 1px solid gray;
+  background-color: rgba(0,0,0,0.5);
+  margin-right: 2em;
+  font-family: 'Arial', sans-serif;
+  font-size: 11px;
+  td {
+    text-align: center;
+    padding: 0.5em 0.5em 0.5em 0.5em;
+    border: 1px solid gray;
+  }
+  th {
+    text-align: center;
+    padding: 0.5em 0.5em 0.5em 0.5em;
+    border: 1px solid gray;
+  }
+}

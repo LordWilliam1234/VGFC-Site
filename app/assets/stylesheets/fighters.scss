@@ -67,9 +67,12 @@ table.CharMoves {
 table.FrameTable {
   border: 1px solid gray;
   background-color: rgba(0,0,0,0.5);
-  margin-right: 2em;
+  margin-right: 3em;
   font-family: 'Arial', sans-serif;
   font-size: 11px;
+  .Command {
+    width: 120px;
+  }
   td {
     text-align: center;
     padding: 0.5em 0.5em 0.5em 0.5em;

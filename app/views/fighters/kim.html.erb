@@ -1,2 +1,21 @@
-<% provide(:title, "Kim") %>
-<%= image_tag "kim/bust.png" %>
+<% provide(:title, "Kim Kaphwan") %>
+<div id="FighterPage">
+<h1 id="Name">Kim</h1>
+<%= image_tag "kim/bust.png", :class => "FighterImg" %>
+<p class="Bio">Kaphwan Kim, usually written surname first as Kim Kaphwan, is a character in both the Fatal Fury and The King of Fighters seris by SNK. Kim is a master of Taekwondo and considers himself a fighter of justice. Kim's original teammates, Chang Koehan and Choi Bounge, were to be teamed up with another dangerous criminal character to form the "Fugitive Team," but Kim was added to the team instead. His official nickname is <strong>The Crown Jewel of Taekwondo.</strong>
+<br>
+<br>
+Bio from <a href="http://snk.wikia.com/wiki/Kim_Kaphwan">The SNK Wiki</a>. Read more there!</p>
+<div class="MainInfo">
+<h2 id="Basics">The Basics</h2>
+<p>TBW</p>
+<h2 id="MoveInfo">Move Info</h2>
+
+<%= render 'layouts/fighters/kimmoves' %>
+
+<h2 id="FrameData">Frame Data</h2>
+
+<%= render 'layouts/fighters/kimframes' %>
+
+</div>
+</div>

@@ -4,4 +4,7 @@ class FightersController < ApplicationController
 
   def kim
   end
+
+  def eryu
+  end
 end

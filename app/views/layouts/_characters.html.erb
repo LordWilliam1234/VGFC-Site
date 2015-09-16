@@ -2,7 +2,7 @@
   <div class="charnames1">
   <ul>
   <li><%= link_to "Ryu", ryu_path, :class => "mainlink" %></li>
-  <li><%= link_to "Ken", '#', :class => "badlink" %> </li>
+  <li><%= link_to "Ken", ken_path, :class => "mainlink" %> </li>
   <li><%= link_to "Guile", '#', :class => "badlink" %> </li>
   <li><%= link_to "Mike Haggar", '#', :class => "badlink" %> </li>
   <li><%= link_to "Makoto", '#', :class => "badlink" %> </li>
@@ -144,7 +144,7 @@
 <tr>
   <th><%= image_tag("vken.png", alt: "Violent Ken") %></th>
   <th><%= image_tag("chun.png", alt: "Chun-li") %></th>
-  <th><%= image_tag("ken.png", alt: "Ken") %></th>
+  <th><%= link_to image_tag("ken.png", alt: "Ken"), ken_path %></th>
   <th><%= link_to image_tag("ryu.png", alt: "Ryu"), ryu_path %></th>
   <th><%= image_tag("kyo.png", alt: "Kyo") %></th>
   <th><%= link_to image_tag("kim.png", alt: "Kim"), kim_path %></th>

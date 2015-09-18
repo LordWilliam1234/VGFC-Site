@@ -7,4 +7,10 @@ class FightersController < ApplicationController
 
   def eryu
   end
+
+  def ken
+  end
+  
+  def vken
+  end
 end

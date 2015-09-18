@@ -43,7 +43,7 @@
   <li><%= link_to "Maki", '#', :class => "badlink" %> </li>
   <li><%= link_to "Hugo", '#', :class => "badlink" %> </li>
   <li><%= link_to "Evil Ryu", evilryu_path, :class => "mainlink" %> </li>
-  <li><%= link_to "Violent Ken", '#', :class => "badlink" %> </li>
+  <li><%= link_to "Violent Ken", vken_path, :class => "mainlink" %> </li>
   <li><%= link_to "Shin Akuma", '#', :class => "badlink" %> </li>
   <li><%= link_to "Kim", kim_path, :class => "mainlink" %> </li>
   <li><%= link_to "Kyo", '#', :class => "badlink" %> </li>
@@ -142,7 +142,7 @@
   <th><%= image_tag("zargojack.png", alt: "Zargojack") %></th>
 </tr>
 <tr>
-  <th><%= image_tag("vken.png", alt: "Violent Ken") %></th>
+  <th><%= link_to image_tag("vken.png", alt: "Violent Ken"), vken_path %></th>
   <th><%= image_tag("chun.png", alt: "Chun-li") %></th>
   <th><%= link_to image_tag("ken.png", alt: "Ken"), ken_path %></th>
   <th><%= link_to image_tag("ryu.png", alt: "Ryu"), ryu_path %></th>

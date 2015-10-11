@@ -13,4 +13,13 @@ class FightersController < ApplicationController
   
   def vken
   end
+
+  def kyo
+  end
+  
+  def guile
+  end
+
+  def ryo
+  end
 end

@@ -6,4 +6,5 @@ Rails.application.routes.draw do
   get 'ken' => 'fighters#ken'
   get 'vken' => 'fighters#vken'
   get 'kyo' => 'fighters#kyo'
+  get 'guile' => 'fighters#guile'
 end

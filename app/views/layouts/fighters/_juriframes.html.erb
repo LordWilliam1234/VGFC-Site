@@ -1,0 +1,747 @@
+<p>Health: 950 Stun: 1000</p>
+<table class="FrameTable">
+  <colgroup>
+    <col class="firstcolumn" />
+    <col class="Command" />
+  </colgroup>
+  <tr>
+    <th>Move Name</th>
+    <th>Command</th>
+    <th>Move Type</th>
+    <th>Damage</th>
+    <th>Stun</th>
+    <th>Meter Gain<br>(Whiff/Hit)</th>
+    <th>Start-up</th>
+    <th>Active</th>
+    <th>Recovery</th>
+    <th>Advantage<br>(On Hit)</th>
+    <th>Advantage<br>(On Block)</th>
+    <th>Juggle Potential</th>
+    <th>Juggle Cost</th>
+    <th>Hit Level</th>
+    <th>Cancel Ability</th>
+    <th>Move Properties</th>
+    <th>Counter-hit Properties</th>
+    <th>Other Notes</th>
+  </tr>
+  <tr>
+    <td>Standing Light Punch</td>
+    <td><%= image_tag "info/lp.png" %></td>
+    <td>Medium</td>
+    <td>70</td>
+    <td>100</td>
+    <td>5/40</td>
+    <td>6</td>
+    <td>4</td>
+    <td>11</td>
+    <td>+2</td>
+    <td>0</td>
+    <td>3</td>
+    <td>1</td>
+    <td>Mid</td>
+    <td>ch/sp/su</td>
+    <td></td>
+    <td>+3 Frame Advantage</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Close Light Kick</td>
+    <td><%= image_tag "info/lk.png" %> (Close)</td>
+    <td>Light</td>
+    <td>30</td>
+    <td>50</td>
+    <td>0/20</td>
+    <td>3</td>
+    <td>3</td>
+    <td>5</td>
+    <td>+7</td>
+    <td>+4</td>
+    <td>2</td>
+    <td>1</td>
+    <td>Low</td>
+    <td>ch/sp/su</td>
+    <td><%= image_tag "info/rapidfire.png" %></td>
+    <td>+1 Frame Advantage</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Standing Light Kick</td>
+    <td><%= image_tag "info/lk.png" %></td>
+    <td>Light</td>
+    <td>40</td>
+    <td>50</td>
+    <td>0/20</td>
+    <td>4</td>
+    <td>3</td>
+    <td>7</td>
+    <td>+4</td>
+    <td>+1</td>
+    <td>2</td>
+    <td>1</td>
+    <td>Mid</td>
+    <td>ch/sp/su</td>
+    <td></td>
+    <td>+1 Frame Advantage</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Close Heavy Punch</td>
+    <td><%= image_tag "info/hp.png" %> (Close)</td>
+    <td>Heavy</td>
+    <td>100</td>
+    <td>200</td>
+    <td>10/60</td>
+    <td>6</td>
+    <td>4</td>
+    <td>26</td>
+    <td>-</td>
+    <td>-12</td>
+    <td>4</td>
+    <td>1</td>
+    <td>Mid</td>
+    <td>sp/su</td>
+    <td><%= image_tag "info/launch.png" %></td>
+    <td></td>
+    <td>Crushes airborne attacks frames 6-10. Throw invincible frames 4-27.</td>
+  </tr>
+  <tr>
+    <td>Standing Heavy Punch</td>
+    <td><%= image_tag "info/hp.png" %></td>
+    <td>Heavy</td>
+    <td>120</td>
+    <td>200</td>
+    <td>10/60</td>
+    <td>10</td>
+    <td>4</td>
+    <td>19</td>
+    <td>-1</td>
+    <td>-5</td>
+    <td>4</td>
+    <td>1</td>
+    <td>Mid</td>
+    <td>-</td>
+    <td></td>
+    <td><%= image_tag "info/crumple.png" %></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Close Heavy Kick</td>
+    <td><%= image_tag "info/hk.png" %> (Close)</td>
+    <td>Medium</td>
+    <td>40x2</td>
+    <td>50x2</td>
+    <td>5/20</td>
+    <td>6</td>
+    <td>3(6)2</td>
+    <td>19</td>
+    <td>-4</td>
+    <td>-7</td>
+    <td>3</td>
+    <td>1</td>
+    <td>Low*Mid</td>
+    <td>ch/sp/su</td>
+    <td></td>
+    <td>+3 Frame Advantage</td>
+    <td>Airborne frames 1-6</td>
+  </tr>
+  <tr>
+    <td>Standing Heavy Kick</td>
+    <td><%= image_tag "info/hk.png" %></td>
+    <td>Medium</td>
+    <td>30*70</td>
+    <td>30*70</td>
+    <td>5/30</td>
+    <td>5</td>
+    <td>2*3</td>
+    <td>14</td>
+    <td>-1</td>
+    <td>-4</td>
+    <td>3</td>
+    <td>1</td>
+    <td>Mid</td>
+    <td>-</td>
+    <td></td>
+    <td>+3 Frame Advantage</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Crouching Light Punch</td>
+    <td><%= image_tag "info/down.png" %> + <%= image_tag "info/lp.png" %></td>
+    <td>Medium</td>
+    <td>70</td>
+    <td>100</td>
+    <td>5/40</td>
+    <td>5</td>
+    <td>6</td>
+    <td>9</td>
+    <td>+2</td>
+    <td>0</td>
+    <td>3</td>
+    <td>1</td>
+    <td>Mid</td>
+    <td>ch/sp/su</td>
+    <td></td>
+    <td>+3 Frame Advantage</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Crouching Light Kick</td>
+    <td><%= image_tag "info/down.png" %> + <%= image_tag "info/lk.png" %></td>
+    <td>Light</td>
+    <td>20</td>
+    <td>50</td>
+    <td>0/20</td>
+    <td>4</td>
+    <td>4</td>
+    <td>5</td>
+    <td>+6</td>
+    <td>+3</td>
+    <td>2</td>
+    <td>1</td>
+    <td>Low</td>
+    <td>ch/sp/su</td>
+    <td><%= image_tag "info/rapidfire.png" %></td>
+    <td>+1 Frame Advantage</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Crouching Heavy Punch</td>
+    <td><%= image_tag "info/down.png" %> + <%= image_tag "info/hp.png" %></td>
+    <td>Heavy</td>
+    <td>100</td>
+    <td>200</td>
+    <td>10/60</td>
+    <td>7</td>
+    <td>4</td>
+    <td>20</td>
+    <td>-1</td>
+    <td>-4</td>
+    <td>1</td>
+    <td>1</td>
+    <td>Mid</td>
+    <td>jump/sp/su</td>
+    <td><%= image_tag "info/knockdown.png" %></td>
+    <td>+3 Frame Advantage</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Crouching Heavy Kick</td>
+    <td><%= image_tag "info/down.png" %> + <%= image_tag "info/hk.png" %></td>
+    <td>Medium</td>
+    <td>60</td>
+    <td>100</td>
+    <td>5/40</td>
+    <td>6</td>
+    <td>2</td>
+    <td>17</td>
+    <td>0</td>
+    <td>-3</td>
+    <td>3</td>
+    <td>1</td>
+    <td>Mid</td>
+    <td>ch/sp/su</td>
+    <td></td>
+    <td>+3 Frame Advantage</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Jumping Light Punch</td>
+    <td><%= image_tag "info/lp.png" %></td>
+    <td>Medium</td>
+    <td>80</td>
+    <td>100</td>
+    <td>5/40</td>
+    <td>5</td>
+    <td>6</td>
+    <td>2 (land)</td>
+    <td>-</td>
+    <td>-</td>
+    <td>3</td>
+    <td>1</td>
+    <td>Overhead</td>
+    <td>sp</td>
+    <td><%= image_tag "info/aironly.png" %><br><%= image_tag "info/knockdown.png" %></td>
+    <td>+3 Frame Advantage</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Jumping Light Kick</td>
+    <td><%= image_tag "info/lk.png" %></td>
+    <td>Medium</td>
+    <td>70</td>
+    <td>100</td>
+    <td>5/40</td>
+    <td>5</td>
+    <td>6</td>
+    <td>2 (land)</td>
+    <td>-</td>
+    <td>-</td>
+    <td>3</td>
+    <td>1</td>
+    <td>Overhead</td>
+    <td>-</td>
+    <td><%= image_tag "info/aironly.png" %></td>
+    <td>+3 Frame Advantage</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Jumping Heavy Punch</td>
+    <td><%= image_tag "info/hp.png" %></td>
+    <td>Heavy</td>
+    <td>90</td>
+    <td>100</td>
+    <td>10/60</td>
+    <td>7</td>
+    <td>4</td>
+    <td>2 (land)</td>
+    <td>-</td>
+    <td>-</td>
+    <td>4</td>
+    <td>1</td>
+    <td>Overhead</td>
+    <td>-</td>
+    <td><%= image_tag "info/aironly.png" %><br><%= image_tag "info/groundbounce.png" %></td>
+    <td>+3 Frame Advantage</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Jumping Heavy Kick</td>
+    <td><%= image_tag "info/hk.png" %></td>
+    <td>Heavy</td>
+    <td>100</td>
+    <td>200</td>
+    <td>10/60</td>
+    <td>6</td>
+    <td>6</td>
+    <td>2 (land)</td>
+    <td>-</td>
+    <td>-</td>
+    <td>4</td>
+    <td>1</td>
+    <td>Overhead</td>
+    <td>-</td>
+    <td><%= image_tag "info/aironly.png" %></td>
+    <td>+3 Frame Advantage</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Normal Throw</td>
+    <td><%= image_tag "info/lp.png" %> + <%= image_tag "info/lk.png" %></td>
+    <td>-</td>
+    <td>130</td>
+    <td>130</td>
+    <td>0/0</td>
+    <td>3</td>
+    <td>2</td>
+    <td>21</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>Throw</td>
+    <td>-</td>
+    <td><%= image_tag "info/hardknockdown.png" %></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Sekku</td>
+    <td><%= image_tag "info/right.png" %> + <%= image_tag "info/hk.png" %></td>
+    <td>Medium</td>
+    <td>70</td>
+    <td>100</td>
+    <td>5/40</td>
+    <td>17</td>
+    <td>2</td>
+    <td>17</td>
+    <td>+2</td>
+    <td>-1</td>
+    <td>3</td>
+    <td>1</td>
+    <td>Overhead</td>
+    <td>-</td>
+    <td><%= image_tag "info/knockdown.png" %></td>
+    <td>+3 Frame Advantage</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Fuhajin (Store)</td>
+    <td><%= image_tag "info/qcf.png" %> + <%= image_tag "info/kick.gif" %></td>
+    <td>Special</td>
+    <td>50</td>
+    <td>50</td>
+    <td>15/40</td>
+    <td>9</td>
+    <td>6</td>
+    <td>16</td>
+    <td>-</td>
+    <td>-1</td>
+    <td>5</td>
+    <td>10</td>
+    <td>Mid</td>
+    <td>-</td>
+    <td><%= image_tag "info/projectile.png" %><br><%= image_tag "info/launch.png" %></td>
+    <td></td>
+    <td>Projectile invincible frames 9-15</td>
+  </tr>
+  <tr>
+    <td>Fuhajin (Release)</td>
+    <td><%= image_tag "info/qcf.png" %> + <%= image_tag "info/punch.gif" %></td>
+    <td>Special</td>
+    <td>50</td>
+    <td>50</td>
+    <td>0/20</td>
+    <td>11</td>
+    <td>-</td>
+    <td>22</td>
+    <td>+10</td>
+    <td>+7</td>
+    <td>5</td>
+    <td>1</td>
+    <td>Mid</td>
+    <td>-</td>
+    <td><%= image_tag "info/projectile.png" %></td>
+    <td></td>
+    <td>Projectile lasts for 52 frames. Button strength determines angle.</td>
+  </tr>
+  <tr>
+    <td>EX Fuhajin Release</td>
+    <td><%= image_tag "info/qcf.png" %> + <%= image_tag "info/2p.gif" %></td>
+    <td>Special</td>
+    <td>60x2</td>
+    <td>80x2</td>
+    <td>-400/0</td>
+    <td>13</td>
+    <td>-</td>
+    <td>26</td>
+    <td>-</td>
+    <td>+9</td>
+    <td>6</td>
+    <td>1</td>
+    <td>Mid</td>
+    <td>-</td>
+    <td><%= image_tag "info/projectile.png" %><br><%= image_tag "info/launch.png" %></td>
+    <td></td>
+    <td>Projectile lasts for 49 frames.</td>
+  </tr>
+  <tr>
+    <td>Senpusha (L)</td>
+    <td><%= image_tag "info/qcb.png" %> + <%= image_tag "info/lk.png" %></td>
+    <td>Special</td>
+    <td>60*40</td>
+    <td>40*40</td>
+    <td>15/20</td>
+    <td>7</td>
+    <td>3(2)4</td>
+    <td>21</td>
+    <td>+1</td>
+    <td>-4</td>
+    <td>8</td>
+    <td>1</td>
+    <td>Mid</td>
+    <td>su</td>
+    <td><%= image_tag "info/stagger.png" %></td>
+    <td>+3 Frame Advantage</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Senpusha (H)</td>
+    <td><%= image_tag "info/qcb.png" %> + <%= image_tag "info/hk.png" %></td>
+    <td>Special</td>
+    <td>60*30x3</td>
+    <td>50*35x3</td>
+    <td>15/10</td>
+    <td>14</td>
+    <td>3(2)4(6)3(2)4</td>
+    <td>28</td>
+    <td>-</td>
+    <td>-11</td>
+    <td>5</td>
+    <td>1</td>
+    <td>Mid</td>
+    <td>-</td>
+    <td><%= image_tag "info/stagger.png" %><br><%= image_tag "info/launch.png" %></td>
+    <td></td>
+    <td></td>
+  </tr>
+<tr>
+    <td>EX Senpusha</td>
+    <td><%= image_tag "info/qcb.png" %> + <%= image_tag "info/2k.gif" %></td>
+    <td>Special</td>
+    <td>10x8</td>
+    <td>10x8</td>
+    <td>-400/0</td>
+    <td>7</td>
+    <td>3(3)3(3)3(3)3<br>(3)3(3)3(3)3<br>(3)3</td>
+    <td>32</td>
+    <td>-</td>
+    <td>-15</td>
+    <td>99</td>
+    <td>1</td>
+    <td>Mid</td>
+    <td>-</td>
+    <td><%= image_tag "info/launch.png" %></td>
+    <td></td>
+    <td>Fully invincible frames 1-8</td>
+  </tr>
+  <tr>
+    <td>Shikusen</td>
+    <td><%= image_tag "info/qcb.png" %> + <%= image_tag "info/kick.gif" %></td>
+    <td>Special</td>
+    <td>40</td>
+    <td>50</td>
+    <td>15/40</td>
+    <td>14</td>
+    <td>Until<br>Ground</td>
+    <td>19 (land)</td>
+    <td>-</td>
+    <td>-</td>
+    <td>4</td>
+    <td>1</td>
+    <td>Mid</td>
+    <td>Followup</td>
+    <td><%= image_tag "info/aironly.png" %><br><%= image_tag "info/launch.png" %></td>
+    <td></td>
+    <td>Projectile invincible frames 14~</td>
+  </tr>
+  <tr>
+    <td>Second Impact</td>
+    <td><%= image_tag "info/kick.gif" %> during Shikusen</td>
+    <td>Special</td>
+    <td>20x2</td>
+    <td>20x2</td>
+    <td>0/20</td>
+    <td>9</td>
+    <td>4(5)2</td>
+    <td>28 (land)</td>
+    <td>-</td>
+    <td>-</td>
+    <td>5*6</td>
+    <td>1</td>
+    <td>Mid</td>
+    <td>Followup</td>
+    <td><%= image_tag "info/launch.png" %></td>
+    <td></td>
+    <td></td>
+  </tr>
+<tr>
+    <td>Third Strike</td>
+    <td><%= image_tag "info/kick.gif" %> during Second Impact </td>
+    <td>Special</td>
+    <td>80</td>
+    <td>100</td>
+    <td>0/20</td>
+    <td>21</td>
+    <td>5</td>
+    <td>19 (land)</td>
+    <td>-</td>
+    <td>-</td>
+    <td>7</td>
+    <td>1</td>
+    <td>Mid</td>
+    <td>Followup</td>
+    <td><%= image_tag "info/launch.png" %></td>
+    <td></td>
+    <td>Projectile invincible frames 14~</td>
+  </tr>
+  <tr>
+    <td>EX Shikusen</td>
+    <td><%= image_tag "info/qcb.png" %> + <%= image_tag "info/2k.gif" %></td>
+    <td>Special</td>
+    <td>50*25*25*60</td>
+    <td>50*20*20*80</td>
+    <td>-400/0</td>
+    <td>14</td>
+    <td>Until<br>Ground</td>
+    <td>14 (land)</td>
+    <td>-</td>
+    <td>-</td>
+    <td>5</td>
+    <td>0</td>
+    <td>Mid</td>
+    <td>-</td>
+    <td><%= image_tag "info/launch.png" %><br><%= image_tag "info/wallbounce.png" %></td>
+    <td></td>
+    <td>Automatically transitions into follow-up if it connects. Projectile invincible frames 1~</td>
+  </tr>
+<tr>
+    <td>Kasatushi</td>
+    <td><%= image_tag "info/qcb.png" %> + <%= image_tag "info/punch.gif" %></td>
+    <td>Special</td>
+    <td>-</td>
+    <td>-</td>
+    <td>15/0</td>
+    <td>1</td>
+    <td>29</td>
+    <td>17</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td></td>
+    <td>Counters any blockable strike or projectile.</td>
+  </tr>
+  <tr>
+    <td>Kasatushi (Success)</td>
+    <td></td>
+    <td>Special</td>
+    <td>-</td>
+    <td>-</td>
+    <td>0/0</td>
+    <td>-</td>
+    <td>-</td>
+    <td>20</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td></td>
+    <td>Hold forward to move Juri forward, hold back to move Juri backward. Strike and projectile invincible frames 1-15. Can pass through opponents.</td>
+  </tr>
+  <tr>
+    <td>Feng Shui Engine</td>
+    <td><%= image_tag "info/qcb.png" %> + <%= image_tag "info/2p.gif" %></td>
+    <td>Super</td>
+    <td>-</td>
+    <td>-</td>
+    <td>0/0</td>
+    <td>-</td>
+    <td>-</td>
+    <td>1</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td></td>
+    <td>Enters Feng Shui Engine state, which lasts until you run out of meter (requires at least one bar to activate). Dash increases in speed, Kasatushi is changed to a command teleport, some moves gain new properties or different frame data, and you can chain into Sekku from normals. You do not build any additional meter during Feng Shui Engine.</td>
+  </tr>
+  <tr>
+    <td>Close Light Kick (FSE)</td>
+    <td><%= image_tag "info/lk" %> (Close)</td>
+    <td>Light</td>
+    <td>30</td>
+    <td>50</td>
+    <td>0/20</td>
+    <td>3</td>
+    <td>3</td>
+    <td>5</td>
+    <td>+7</td>
+    <td>+4</td>
+    <td>5</td>
+    <td>1</td>
+    <td>Low</td>
+    <td>ch/sp/su</td>
+    <td><%= image_tag "info/rapidfire.png" %></td>
+    <td>+1 Frame Advantage</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Crouching Light Kick (FSE)</td>
+    <td><%= image_tag "info/down.png" %><br><%= image_tag "info/lk" %></td>
+    <td>Light</td>
+    <td>20</td>
+    <td>50</td>
+    <td>0/20</td>
+    <td>4</td>
+    <td>4</td>
+    <td>5</td>
+    <td>+6</td>
+    <td>+3</td>
+    <td>5</td>
+    <td>1</td>
+    <td>Low</td>
+    <td>ch/sp/su</td>
+    <td><%= image_tag "info/rapidfire.png" %></td>
+    <td>+1 Frame Advantage</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Crouching Heavy Punch (FSE)</td>
+    <td><%= image_tag "info/down.png" %><%= image_tag "info/hp" %></td>
+    <td>Heavy</td>
+    <td>100</td>
+    <td>200</td>
+    <td>10/60</td>
+    <td>7</td>
+    <td>4</td>
+    <td>20</td>
+    <td>-1</td>
+    <td>-4</td>
+    <td>5</td>
+    <td>1</td>
+    <td>Mid</td>
+    <td>jump/sp/su</td>
+    <td><%= image_tag "info/knockdown.png" %></td>
+    <td>+3 Frame Advantage</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Sekku (FSE)</td>
+    <td><%= image_tag "info/right" %> + <%= image_tag "info/hk.png" %></td>
+    <td>Medium</td>
+    <td>70</td>
+    <td>100</td>
+    <td>5/40</td>
+    <td>14</td>
+    <td>2</td>
+    <td>15</td>
+    <td>+8</td>
+    <td>+2</td>
+    <td>3</td>
+    <td>1</td>
+    <td>Overhead</td>
+    <td>-</td>
+    <td><%= image_tag "info/knockdown.png" %></td>
+    <td>+3 Frame Advantage</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Senpusha (L) (FSE)</td>
+    <td><%= image_tag "info/qcb" %> + <%= image_tag "info/lk.png" %></td>
+    <td>Special</td>
+    <td>60*40</td>
+    <td>40*40</td>
+    <td>15/20</td>
+    <td>7</td>
+    <td>3*4</td>
+    <td>21</td>
+    <td>+2</td>
+    <td>0</td>
+    <td>8</td>
+    <td>1</td>
+    <td>Mid</td>
+    <td>su</td>
+    <td><%= image_tag "info/stagger.png" %></td>
+    <td>+3 Frame Advantage</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Kasatushi (FSE)</td>
+    <td><%= image_tag "info/qcb.png" %><br><%= image_tag "info/punch.gif" %></td>
+    <td>Special</td>
+    <td>-</td>
+    <td>-</td>
+    <td>0/0</td>
+    <td>-</td>
+    <td>-</td>
+    <td>20</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td></td>
+    <td>Light version moves Juri forward, Heavy moves Juri backward. Can pass through opponents.</td>
+  </tr>  
+</table>

@@ -1,0 +1,547 @@
+<p>Health: 900 Stun: 900</p>
+<table class="FrameTable">
+  <colgroup>
+    <col class="firstcolumn" />
+    <col class="Command" />
+  </colgroup>
+  <tr>
+    <th>Move Name</th>
+    <th>Command</th>
+    <th>Move Type</th>
+    <th>Damage</th>
+    <th>Stun</th>
+    <th>Meter Gain<br>(Whiff/Hit)</th>
+    <th>Start-up</th>
+    <th>Active</th>
+    <th>Recovery</th>
+    <th>Advantage<br>(On Hit)</th>
+    <th>Advantage<br>(On Block)</th>
+    <th>Juggle Potential</th>
+    <th>Juggle Cost</th>
+    <th>Hit Level</th>
+    <th>Cancel Ability</th>
+    <th>Move Properties</th>
+    <th>Counter-hit Properties</th>
+    <th>Other Notes</th>
+  </tr>
+  <tr>
+    <td>Standing Light Punch</td>
+    <td><%= image_tag "info/lp.png" %></td>
+    <td>Light</td>
+    <td>30</td>
+    <td>50</td>
+    <td>0/20</td>
+    <td>3</td>
+    <td>2</td>
+    <td>5</td>
+    <td>+9</td>
+    <td>+6</td>
+    <td>2</td>
+    <td>1</td>
+    <td>Mid</td>
+    <td>ch/sp/su</td>
+    <td><%= image_tag "info/rapidfire.png" %></td>
+    <td>+1 Frame Advantage</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Standing Light Kick</td>
+    <td><%= image_tag "info/lk.png" %></td>
+    <td>Light</td>
+    <td>40</td>
+    <td>50</td>
+    <td>0/20</td>
+    <td>4</td>
+    <td>4</td>
+    <td>7</td>
+    <td>+5</td>
+    <td>+2</td>
+    <td>2</td>
+    <td>1</td>
+    <td>Mid</td>
+    <td>ch/sp/su</td>
+    <td></td>
+    <td>+1 Frame Advantage</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Standing Heavy Punch</td>
+    <td><%= image_tag "info/hp.png" %></td>
+    <td>Medium</td>
+    <td>35x2</td>
+    <td>50x2</td>
+    <td>5/20</td>
+    <td>5</td>
+    <td>3(6)3</td>
+    <td>11</td>
+    <td>+4</td>
+    <td>+2</td>
+    <td>7*8</td>
+    <td>1</td>
+    <td>Mid</td>
+    <td>ch/sp/su</td>
+    <td></td>
+    <td>+3 Frame Advantage</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Standing Heavy Kick</td>
+    <td><%= image_tag "info/hk.png" %></td>
+    <td>Heavy</td>
+    <td>50x2</td>
+    <td>60x2</td>
+    <td>10/30</td>
+    <td>7</td>
+    <td>3(6)6</td>
+    <td>15</td>
+    <td>+1</td>
+    <td>-4</td>
+    <td>9*10</td>
+    <td>1</td>
+    <td>Mid</td>
+    <td>sp/su</td>
+    <td></td>
+    <td>+3 Frame Advantage</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Crouching Light Punch</td>
+    <td><%= image_tag "info/down.png" %> + <%= image_tag "info/lp.png" %></td>
+    <td>Light</td>
+    <td>20</td>
+    <td>50</td>
+    <td>0/20</td>
+    <td>2</td>
+    <td>2</td>
+    <td>8</td>
+    <td>+6</td>
+    <td>+3</td>
+    <td>2</td>
+    <td>1</td>
+    <td>Mid</td>
+    <td>ch/sp/su</td>
+    <td><%= image_tag "info/rapidfire.png" %></td>
+    <td>+1 Frame Advantage</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Crouching Light Kick</td>
+    <td><%= image_tag "info/down.png" %> + <%= image_tag "info/lk.png" %></td>
+    <td>Medium</td>
+    <td>60</td>
+    <td>100</td>
+    <td>5/40</td>
+    <td>5</td>
+    <td>6</td>
+    <td>14</td>
+    <td>0</td>
+    <td>-3</td>
+    <td>3</td>
+    <td>1</td>
+    <td>Low</td>
+    <td>ch/sp/su</td>
+    <td></td>
+    <td>+3 Frame Advantage</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Crouching Heavy Punch</td>
+    <td><%= image_tag "info/down.png" %> + <%= image_tag "info/hp.png" %></td>
+    <td>Heavy</td>
+    <td>100</td>
+    <td>100</td>
+    <td>10/60</td>
+    <td>15</td>
+    <td>20</td>
+    <td>12 (land)</td>
+    <td>-</td>
+    <td>-</td>
+    <td>10</td>
+    <td>1</td>
+    <td>Mid</td>
+    <td>-</td>
+    <td><%= image_tag "info/launch.png" %></td>
+    <td></td>
+    <td>Can be directed horizontally, diagonally upward, or straight up. Horizontal version rebounds on hit/block. If you hold down HP, Dash won't charge forward and will simply land again.</td>
+  </tr>
+  <tr>
+    <td>Crouching Heavy Kick</td>
+    <td><%= image_tag "info/down.png" %> + <%= image_tag "info/hk.png" %></td>
+    <td>Heavy</td>
+    <td>100</td>
+    <td>100</td>
+    <td>10/60</td>
+    <td>9</td>
+    <td>18</td>
+    <td>14</td>
+    <td>-</td>
+    <td>-16</td>
+    <td>11</td>
+    <td>1</td>
+    <td>Low</td>
+    <td>-</td>
+    <td><%= image_tag "info/launch.png" %><br><%= image_tag "info/hardknockdown.png" %></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Jumping Light Punch</td>
+    <td><%= image_tag "info/lp.png" %></td>
+    <td>Light</td>
+    <td>40</td>
+    <td>50</td>
+    <td>0/20</td>
+    <td>5</td>
+    <td>24</td>
+    <td>2 (land)</td>
+    <td>-</td>
+    <td>-</td>
+    <td>7</td>
+    <td>1</td>
+    <td>Mid</td>
+    <td>ch/sp/su</td>
+    <td><%= image_tag "info/aironly.png" %></td>
+    <td>+1 Frame Advantage</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Jumping Light Kick</td>
+    <td><%= image_tag "info/lk.png" %></td>
+    <td>Light</td>
+    <td>40</td>
+    <td>50</td>
+    <td>0/20</td>
+    <td>3</td>
+    <td>4</td>
+    <td>2 (land)</td>
+    <td>-</td>
+    <td>-</td>
+    <td>8</td>
+    <td>1</td>
+    <td>Mid</td>
+    <td>ch/sp/su</td>
+    <td><%= image_tag "info/aironly.png" %></td>
+    <td>+1 Frame Advantage</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Jumping Heavy Punch</td>
+    <td><%= image_tag "info/hp.png" %></td>
+    <td>Medium</td>
+    <td>70</td>
+    <td>100</td>
+    <td>5/40</td>
+    <td>6</td>
+    <td>6</td>
+    <td>4 (land)</td>
+    <td>-</td>
+    <td>-</td>
+    <td>9</td>
+    <td>1</td>
+    <td>Overhead</td>
+    <td>ch/sp/su</td>
+    <td><%= image_tag "info/aironly.png" %><br><%= image_tag "info/knockdown.png" %></td>
+    <td>+3 Frame Advantage</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Jumping Heavy Kick</td>
+    <td><%= image_tag "info/hk.png" %></td>
+    <td>Heavy</td>
+    <td>100</td>
+    <td>100</td>
+    <td>10/60</td>
+    <td>12</td>
+    <td>4</td>
+    <td>2 (land)</td>
+    <td>-</td>
+    <td>-</td>
+    <td>10</td>
+    <td>4</td>
+    <td>Overhead</td>
+    <td>-</td>
+    <td><%= image_tag "info/aironly.png" %><%= image_tag "info/groundbounce.png" %></td>
+    <td>+3 Frame Advantage</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Normal Throw</td>
+    <td><%= image_tag "info/lp.png" %> + <%= image_tag "info/lk.png" %></td>
+    <td>-</td>
+    <td>0</td>
+    <td>0</td>
+    <td>0/0</td>
+    <td>3</td>
+    <td>2</td>
+    <td>21</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>Throw</td>
+    <td>-</td>
+    <td><%= image_tag "info/groundbounce.png" %></td>
+    <td></td>
+    <td>Recovery can be cancelled into an aireal attack.</td>
+  </tr>
+  <tr>
+    <td>Hoof Dive</td>
+    <td><%= image_tag "info/downright.png" %> + <%= image_tag "info/hk.png" %></td>
+    <td>Medium</td>
+    <td>60</td>
+    <td>100</td>
+    <td>5/40</td>
+    <td>7</td>
+    <td>Until<br>Ground</td>
+    <td>5 (land)</td>
+    <td>-</td>
+    <td>-</td>
+    <td>9</td>
+    <td>1</td>
+    <td>Mid</td>
+    <td>-</td>
+    <td><%= image_tag "info/aironly.png" %><br><%= image_tag "info/knockdown.png" %></td>
+    <td>+3 Frame Advantage</td>
+    <td>Can only be performed during a neutral or forward jump</td>
+  </tr>
+  <tr>
+    <td>Hurricane Kick (L)</td>
+    <td><%= image_tag "info/qcf.png" %> + <%= image_tag "info/lk.png" %></td>
+    <td>Special</td>
+    <td>70</td>
+    <td>100</td>
+    <td>15/40</td>
+    <td>12</td>
+    <td>5</td>
+    <td>14</td>
+    <td>-</td>
+    <td>-5</td>
+    <td>16</td>
+    <td>12</td>
+    <td>Mid</td>
+    <td>-</td>
+    <td><%= image_tag "info/launch.png" %></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Hurricane Kick (H)</td>
+    <td><%= image_tag "info/qcf.png" %> + <%= image_tag "info/hk.png" %></td>
+    <td>Special</td>
+    <td>60x2</td>
+    <td>100x2</td>
+    <td>15/20</td>
+    <td>12</td>
+    <td>5(12)5</td>
+    <td>15</td>
+    <td>-</td>
+    <td>-6</td>
+    <td>29</td>
+    <td>12</td>
+    <td>Mid</td>
+    <td>-</td>
+    <td><%= image_tag "info/launch.png" %></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>EX Hurricane Kick</td>
+    <td><%= image_tag "info/qcf.png" %> + <%= image_tag "info/2k.gif" %></td>
+    <td>Special</td>
+    <td>60x3</td>
+    <td>100*50x2</td>
+    <td>-400/2</td>
+    <td>7</td>
+    <td>5(7)5(7)5</td>
+    <td>10</td>
+    <td>-</td>
+    <td>+2</td>
+    <td>99</td>
+    <td>0</td>
+    <td>Mid</td>
+    <td>-</td>
+    <td><%= image_tag "info/launch.png" %></td>
+    <td></td>
+    <td>Projectile invincible frames 1-36</td>
+  </tr>
+  <tr>
+    <td>Storm Cloud</td>
+    <td><%= image_tag "info/qcb.png" %> + <%= image_tag "info/punch.gif" %></td>
+    <td>Special</td>
+    <td>100</td>
+    <td>200</td>
+    <td>15/40</td>
+    <td>16</td>
+    <td>12</td>
+    <td>5 (land)</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>Mid</td>
+    <td>-</td>
+    <td><%= image_tag "info/projectile.png" %><br><%= image_tag "info/launch.png" %></td>
+    <td></td>
+    <td>Cannot hit airborne opponents. LP versions moves Dash backwards; HP version moves her forwards.</td>
+  </tr>
+  <tr>
+    <td>The Rainbow Dash</td>
+    <td><%= image_tag "info/qcb.png" %> + <%= image_tag "info/punch.gif" %></td>
+    <td>Special</td>
+    <td>100</td>
+    <td>100</td>
+    <td>15/40</td>
+    <td>7</td>
+    <td>20</td>
+    <td>12 (land)</td>
+    <td>-</td>
+    <td>-</td>
+    <td>10</td>
+    <td>2</td>
+    <td>Mid</td>
+    <td>ch/sp/su</td>
+    <td><%= image_tag "info/aironly.png" %><br><%= image_tag "info/launch.png" %></td>
+    <td></td>
+    <td>Cannot cancel into itself. Can be directed in 5 directions: <%= image_tag "info/up.png" %>, <%= image_tag "info/upright.png" %>, <%= image_tag "info/right.png" %>, <%= image_tag "info/downright.png" %>, <%= image_tag "info/down.png" %>, or not pressing a direction during the start-up. </td>
+  </tr>
+  <tr>
+    <td>Flight</td>
+    <td><%= image_tag "info/qcb.png" %> + <%= image_tag "info/kick.gif" %></td>
+    <td>Special</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>4 (land)</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>Air</td>
+    <td></td>
+    <td></td>
+    <td>During flight, can move forward and backwards, slowly descends. Can perform any of her air attacks during flight; doing so will cancel out flight.</td>
+  </tr>
+  <tr>
+    <td>Sonic Somersault</td>
+    <td><%= image_tag "info/dp.png" %> + <%= image_tag "info/kick.gif" %></td>
+    <td>Special</td>
+    <td>120</td>
+    <td>200</td>
+    <td>15/40</td>
+    <td>5</td>
+    <td>6</td>
+    <td>13 (land)</td>
+    <td>-</td>
+    <td>-</td>
+    <td>99</td>
+    <td>99</td>
+    <td>Mid</td>
+    <td>-</td>
+    <td><%= image_tag "info/launch.png" %></td>
+    <td></td>
+    <td>Crushes airborne attacks frames 1-11</td>
+  </tr>
+  <tr>
+    <td>EX Sonic Somersault</td>
+    <td><%= image_tag "info/dp.png" %> + <%= image_tag "info/2k.gif" %></td>
+    <td>Special</td>
+    <td>160</td>
+    <td>250</td>
+    <td>-400/0</td>
+    <td>3</td>
+    <td>8</td>
+    <td>14 (land)</td>
+    <td>-</td>
+    <td>-</td>
+    <td>99</td>
+    <td>99</td>
+    <td>Mid</td>
+    <td>-</td>
+    <td><%= image_tag "info/launch.png" %></td>
+    <td></td>
+    <td>Fully invincible frames 1-6, crushes airborne attacks frames 1-11.</td>
+  </tr>
+  <tr>
+    <td>Air Catch</td>
+    <td><%= image_tag "info/qcf.png" %> + <%= image_tag "info/punch.gif" %></td>
+    <td>Special</td>
+    <td>0</td>
+    <td>0</td>
+    <td>0/0</td>
+    <td>2</td>
+    <td>3</td>
+    <td>4 (land)</td>
+    <td>-</td>
+    <td>-</td>
+    <td>1</td>
+    <td>1</td>
+    <td>Throw</td>
+    <td>-</td>
+    <td><%= image_tag "info/aironly.png" %><br><%= image_tag "info/groundbounce.png" %></td>
+    <td></td>
+    <td>Recovery can be cancelled into any aireal attack.</td>
+  </tr>
+  <tr>
+    <td>EX Air Catch</td>
+    <td><%= image_tag "info/qcf.png" %> + <%= image_tag "info/2p.gif" %></td>
+    <td>Special</td>
+    <td>50</td>
+    <td>200</td>
+    <td>-400/0</td>
+    <td>1</td>
+    <td>3</td>
+    <td>4 (land)</td>
+    <td>-</td>
+    <td>-</td>
+    <td>7</td>
+    <td>0</td>
+    <td>Throw</td>
+    <td>-</td>
+    <td><%= image_tag "info/aironly.png" %><br><%= image_tag "info/groundbounce.png" %></td>
+    <td></td>
+    <td>Recovery can be cancelled into any aireal attack. Fully invincible frames 1-5, doesn't increase scaling.</td>
+  </tr>
+  <tr>
+    <td>Maximum Rainbow</td>
+    <td><%= image_tag "info/qcb.png" %> + <%= image_tag "info/2p.gif" %></td>
+    <td>Super</td>
+    <td>450</td>
+    <td>0</td>
+    <td>-800/0</td>
+    <td>4</td>
+    <td>4</td>
+    <td>12 (land)</td>
+    <td>-</td>
+    <td>-</td>
+    <td>99</td>
+    <td>1</td>
+    <td>Mid</td>
+    <td>-</td>
+    <td><%= image_tag "info/aironly.png" %><br><%= image_tag "info/hardknockdown.png" %></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Sonic Rainboom</td>
+    <td><%= image_tag "info/qcb.png" %> + <%= image_tag "info/2p.gif" %></td>
+    <td>Ultra</td>
+    <td>350</td>
+    <td>0</td>
+    <td>0/0</td>
+    <td>2</td>
+    <td>2</td>
+    <td>25</td>
+    <td>-</td>
+    <td>-10</td>
+    <td>100</td>
+    <td>1</td>
+    <td>Mid</td>
+    <td>-</td>
+    <td><%= image_tag "info/capture.png" %><%= image_tag "info/hardknockdown.png" %></td>
+    <td></td>
+    <td></td>
+  </tr>
+</table>

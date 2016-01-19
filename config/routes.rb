@@ -66,7 +66,7 @@ Rails.application.routes.draw do
   get 'ingrid' => 'fighters#ingrid'
   get 'kyosuke' => 'fighters#kyosuke'
   get 'fluttershy' => 'fighters#fluttershy'
-  get 'juri' => 'fighters#juri'
+  get 'jurihan' => 'fighters#jurihan'
   get 'rainbow' => 'fighters#rainbow'
   get 'king' => 'fighters#king'
   get 'decapre' => 'fighters#decapre'

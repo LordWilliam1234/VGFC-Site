@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   root 'main_pages#home'
+  get 'changes' => 'main_pages#changes'
   get 'ryu' => 'fighters#ryu'
   get 'kim' => 'fighters#kim'
   get 'evilryu' => 'fighters#eryu'

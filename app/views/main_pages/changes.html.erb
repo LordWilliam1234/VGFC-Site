@@ -1,0 +1,254 @@
+<% provide(:title, "Version History") %>
+<div id="FighterPage">
+<h1 id="Name">Version 1.04</h1>
+<div class="MainInfo">
+<h2 id="Basics">Global Changes</h2>
+<ul>
+  <li>Arcade mode now has CPU opponents (though not every character has AI yet)</li>
+  <li>The Red Dragon has been removed as the final boss of Arcade mode and replaced with a new one. There are also 2 hidden bosses if you finish a round with an Ultra enough times and don't lose once.</li>
+  <li>Custom controls will now be saved, and are loaded upon starting the game.</li>
+  <li>Custom music has been added. You can change the music for each stage and the main menu.</li>
+  <li>Forward movement increased on rolls across the board.</li>
+  <li>Rolls are now strike and projectile invincible, but can be thrown.</li>
+  <li>Dodges are now strike and throw invincible, but vulnerable to projectiles.</li>
+  <li>Crumples were altered. Characters will now stay upright when they are in a grounded state, and will topple to the ground when transitioning to an airborne state (the animation change remains true for airborne crumples as well).</li>
+  <li>Light strength normal attacks will now force a reset on a juggled opponent (with a couple of exceptions).</li>
+  <li>All throws will now toss the opponent forwards. If you hold in the opposite direction you are facing you will turn and throw them behind you instead.</li>
+  <li>All moves that are not light attacks will now have guard crush potential. The amount of guard damage they do is generally based on the damage they do, but some moves will do more guard damage than their normal damage (such as Haggar's Pipe).</li>
+  <li>Fixed moves that cause chip damage to also build Ultra meter.</li>
+  <li>Moves that are fully invincible on start-up can no longer be X-cancelled and will not auto-correct.</li>
+  <li>Just Defend will now give you a bit of life back and will restore a small portion of your guard meter (1/4th of the damage of the opponent's attack, rounded upwards). If the attack you Just Defend does chip, however, you will not gain life back but the chip damage will be nullified.</li>
+  <li>Projectiles no longer freeze both players, and instead only freeze the defender. Exceptions being moves like Lucario's Aura Storm, or Blaziken's/Gardevoir's Hyper Beam. Hitstun and blockstun on projectiles has been altered to compensate for this.</li>
+  <li>X-Counter input changed to forward + HP + HK during blockfreeze.</li>
+  <li>Adjustments to certain characters frame data to match the data from the documentation.</li>
+  <li>Parry window increased to 6 frames from 5.</li>
+  <li>Low Parries will now only work against low attacks; Mid attacks can only be parried high.</li>
+  <li>If you attempt to parry while you're in blockstun, the parry window is reduced to 2 frames.</li>
+  <li>Just Defend window reduced to 7 frames from 8.</li>
+  <li>Screen freeze when teching a throw reduced by 10 frames, recovery after teching a throw also reduced by 10 frames. Characters end closer to each other.</li>
+  <li>Added random angles to the hitsparks.</li>
+  <li>Added tech rolls. This is a universal mechanic and not tied to the selectable mechanics. If you tap down-forward or down-back upon landing (or hold forward or back and press the throw input) you will roll in that direction. Tech rolls are fully invincible, but are vulnerable to throws during the last 10 frames. Naturally, tech rolls do not work against hard knockdowns. You cannot perform a reversal after a tech roll.</li>
+  <li>Added wake-up rolls. Hold forward or back to roll in that direction instead of getting straight up off the ground. This works with hard knockdowns as well. Wake-up rolls are fully invincible for most of it but are fully vulnerable at the end. You cannot perform a reversal after a wake-up roll.</li>
+</ul>
+<h2 id="MoveInfo">Character Changes</h2>
+<h3>Ryu</h3>
+<ul>
+  <li>Forward Dash recovers faster and has a faster travel speed.</li>
+  <li>Standing Light Kick:</li>
+  <ul>
+    <li>Start-up reduced, from 5 frames to 4.</li>
+  </ul>
+  <li>Standing Heavy Punch:</li>
+  <ul>
+    <li>Hitbox and hurtbox around his arm reduced vertically.</li>
+    <li>Damage reduced, from 120 to 100.</li>
+    <li>Stun reduced, from 200 to 150.</li>
+    <li>Recovery reduced by 1 frame. Hitstun/blockstun reduced by 1 frame so frame advantage remains the same.</li>
+  </ul>
+  <li>Crouching Heavy Punch:</li>
+  <ul>
+    <li>Hitstun reduced by 2 frames.</li>
+  </ul>
+  <li>Shinkuu Tatsumaki Senpuukyaku:</li>
+  <ul>
+    <li>Hit properties altered so opponents will pass through Ryu, being bounced between the front and back hitboxes. Damage on each hit adjusted accordingly.</li>
+  </ul>
+  <li>Metsu Shoryuken:</li>
+  <ul>
+    <li>Hitboxes expanded forward.</li>
+  </ul>
+</ul>
+<h3>Kim</h3>
+<ul>
+  <li>Hangetsuzan:</li>
+  <ul>
+    <li>Heavy version no longer hits overhead.</li>
+  </ul>
+</ul>
+<h3>Ken</h3>
+<ul>
+  <li>Opponent cannot be hit OTG after a throw.</li>
+  <li>Forward Dash recovers faster and has a faster travel speed.</li>
+  <li>Standing Light Kick:</li>
+  <ul>
+    <li>Start-up reduced, from 6 frames to 5.</li>
+  </ul>
+  <li>Standing Heavy Punch:</li>
+  <ul>
+    <li>Changed to a medium strength attack.</li>
+    <li>Damage reduced from 90 to 70.</li>
+    <li>Stun reduced, from 150 to 100.</li>
+    <li>Can now hit crouching opponents.</li>
+    <li>Recovery reduced by 5 frames, hitstun/blockstun reduced by 1 frame, now +4/0.</li>
+  </ul>
+  <li>Standing Heavy Kick:</li>
+  <ul>
+    <li>Damage increased, from 90 to 110.</li>
+    <li>Stun increased, from 150 to 200.</li>
+    <li>Counter-hit property changed from crumple to launch.</li>
+  </ul>
+  <li>New move: Forward Light Kick.</li>
+  <li>New move: Back Heavy Punch. Causes a crumple on counter-hit.</li>
+  <li>New Target Combo: HP -> HP.</li>
+  <li>New Move: Close Heavy Kick.</li>
+  <li>Flip Kick:</li>
+  <ul>
+    <li>LK version can hit OTG during the later active frames.</li>
+    <li>HK version no longer hits overhead.</li>
+    <li>HK version blockstun increased by 4 frames, now 0 on block.</li>
+  </ul>
+</ul>
+<h3>Kyo</h3>
+<ul>
+  <li>Forward Dash recovery reduced.</li>
+  <li>Forward Light Punch altered to be part of a new rekka chain.</li>
+  <li>Forward Heavy Punch swapped with a new move. Original Forward Heavy Punch is now Aragami, the start of a rekka chain.</li>
+  <li>Forward Heavy Kick:</li>
+  <ul>
+    <li>No longer hits crouching opponents.</li>
+    <li>Recovery reduced by 2 frames, now +2 on block.</li>
+    <li>Can cross over short crouching characters or corpse hop.</li>
+  </ul>
+  <li>New command normal: Shiki. DF + HK. Hits twice and low, +2 on hit/+2 on block.</li>
+  <li>Aragami:</li>
+  <ul>
+    <li>Now the start of a new rekka chain. Can cancel into a launching uppercut or an overhead strike that knocks down. These can be cancelled into a side kick that knocks down or an OTG punch (no longer a stand-alone move).</li>
+  </ul>
+  <li>New special, Doukigami. Starts another rekka chain that can be cancelled into his old Aragami (no longer a stand-alone move) which can be cancelled into a launching shoulder strike.</li>
+  <li>EX R.E.D Kick:</li>
+  <ul>
+    <li>Blockstun reduced by 4 frames, now -1 on block.</li>
+  </ul>
+  <li>New special move; a run grab. Similar to Iori's, can be used in juggles to tack on some extra damage. EX version acts as a command grab.</li>
+  <li>Level 1 Super has been changed.</li>
+</ul>
+<h3>Ryo</h3>
+<ul>
+  <li>Forward Dash recovery reduced.</li>
+  <li>Standing Light Punch:</li>
+  <ul>
+    <li>Hurtbox around his arm removed.</li>
+  </ul>
+  <li>Standing Light Kick changed to a close normal. Changed to a medium strength attack. Damage and stun increased to 70/100. Recovery increased by 1 frame. Hitstun and blockstun increased, now +5/+2.</li>
+  <li>New normal, far light kick.</li>
+  <li>Standing Heavy Punch:</li>
+  <ul>
+    <li>Removed the hurtbox around his hand.</li>
+    <li>Hitbox expanded downwards to connect on all crouchers.</li>
+    <li>Hitstun and blockstun increased, now +4/+4.</li>
+    <li>Damage and stun increased, now 70 damage and 100 stun.</li>
+  </ul>
+  <li>Standing Heavy Kick:</li>
+  <ul>
+    <li>Hitstun and blockstun increased, now 0/-2.</li>
+  </ul>
+  <li>Crouching Light Punch:</li>
+  <ul>
+    <li>Hitbox expanded forward slightly.</li>
+  </ul>
+  <li>Crouching Light Kick:</li>
+  <ul>
+    <li>Hitbox expanded forward slightly.</li>
+  </ul>
+  <li>Crouching Heavy Punch:</li>
+  <ul>
+    <li>Damage and stun increased, now does 100 damage and 200 stun.</li>
+  </ul>
+</ul>
+<h3>Jin</h3>
+<ul>
+  <li>Forward Dash recovers faster.</li>
+  <li>New move: Far Light Kick.</li>
+  <li>Throw animation recovers 1 frame faster.</li>
+</ul>
+<h3>Sakura</h3>
+<ul>
+  <li>Forward Dash recovers faster.</li>
+  <li>Standing Light Punch:</li>
+  <ul>
+    <li>Hurtbox and hitbox around her arm expanded downwards.</li>
+  </ul>
+  <li>Standing Light Kick:</li>
+  <ul>
+    <li>Pushback increased.</li>
+  </ul>
+  <li>Standing Heavy Punch:</li>
+  <ul>
+    <li>Hitstun reduced by 5 frames. Hitstun is now the same as the blockstun. Can still combo into LK Shunpukyaku, but can no longer hit the LK Shunpukyaku meaty in a combo.</li>
+  </ul>
+  <li>Shunpukyaku:</li>
+  <ul>
+    <li>LK version blockstun reduced by 1 frames, now -1 on block.</li>
+  </ul>
+  <li>new move: Sakura Otoshi.</li>
+  <li>Shinku Tengyo Hadoken replaced with an EX Shooken.</li>
+</ul>
+<h3>Kazuya</h3>
+<ul>
+  <li>Standing Light Punch:</li>
+  <ul>
+    <li>Now hits crouching opponents.</li>
+    <li>Hurtbox added around his arm.</li>
+  </ul>
+  <li>New target combo, Left Right Combo (LP -> HP).</li>
+  <li>New target combo, Demon Slayer (LP -> HP -> HP).</li>
+  <li>New target combo, Twin Fang Stature Smash (LP -> HP -> HK).</li>
+  <li>New target combo, Twin Fang Double Kick (LP -> HP -> HK -> LK).</li>
+  <li>Rising Sun:</li>
+  <ul>
+    <li>LK version start-up reduced, from 14 frames to 11.</li>
+  </ul>
+</ul>
+<h3>Karin</h3>
+<ul>
+  <li>X-counter changed to far heavy punch. Knocks the opponent further away.</li>
+  <li>Removed Dive Kick.</li>
+  <li>Walkspeed increased.</li>
+  <li>New move: Far Heavy Punch. Standing Heavy Punch changed to a close normal.</li>
+  <li>Standing Light Kick:</li>
+  <ul>
+    <li>Start-up reduced by 1 frame, from 5 to 4.</li>
+  </ul>
+  <li>Jumping Heavy Punch:</li>
+  <ul>
+    <li>Now causes a ground bounce against airborne.</li>
+  </ul>
+  <li>Slide:</li>
+  <ul>
+    <li>Removed projectile invincible.</li>
+  </ul>
+  <li>Yasha Gaeshi:</li>
+  <ul>
+    <li>Both versions changed to 1 frame start-up. Total frame count unchanged, previous start-up frames changed to active frames.</li>
+  </ul>
+  <li>Mujin Kyaku:</li>
+  <ul>
+    <li>Removed strike and projectile invincibility.</li>
+    <li>Second hit's juggle potential increased from 5 to 6.</li>
+  </ul>
+  <li>Kanzuki-ryuu Kou-ou Ken:</li>
+  <ul>
+    <li>Can now jump cancel the last hit.</li>
+  </ul>
+</ul>
+<h3>Haohmaru</h3>
+<ul>
+  <li>New normal, close heavy punch. Standing heavy punch changed to a far normal.</li>
+  <li>Senpuu Retsu Zan:</li>
+  <ul>
+    <li>Start-up reduced from 27 to 20. Recovery reduced from 47 to 40: now -11 on block.</li>
+    <li>Knockback on hit increased.</li>
+    <li>Juggle potential reduced to 1.</li>
+  </ul>  
+  <li>Kogetsu Zan:</li>
+  <ul>
+    <li>Added strike invincibility frames 1-6.</li>
+    <li>Cancel window increased.</li>
+  </ul>
+  <li>Hiougii TenHa FuJin Zan:</li>
+  <ul>
+    <li>Invincibility lengthened by 2 frames.</li>
+  </ul>
+</ul>
+</div>
+</div>

@@ -1,6 +1,24 @@
 <% provide(:title, "Version History") %>
 <div id="FighterPage">
-<h1 id="Name">Version 1.04</h1>
+<h1 id="Name">Version 1.05 (TBR 4-30-2016)</h1>
+<div class="MainInfo">
+<h2 id="Basics">Global Changes</h2>
+<ul>
+  <li>Fixed a bug where player 2's character sprites would not load correctly in team matches if the first match is a mirror match and player 2 wins.</li>
+  <li>Fixed a bug where if you KO'd a character with a projectile, and the character that threw the projectile was on the last recovery frame, after the pause the character that threw the projectile would be stuck and the game would take longer to get to the next round.</li>
+  <li>Fixed a bug where Sonson's Ultra would use the wrong image for player 2.</li>
+</ul>
+<h2 id="MoveInfo">Character Changes</h2>
+<h3>Ryu</h3>
+<ul>
+  <li>Fixed a bug that caused his Hadoken to only be cancellable on one frame.</li>
+</ul>
+<h3>Ken</h3>
+<ul>
+  <li>Fixed a bug that caused his Hadoken to only be cancellable on one frame.</li>
+</ul>
+</div>
+<h1 id="Name">Version 1.04 (Released 4-25-2016)</h1>
 <div class="MainInfo">
 <h2 id="Basics">Global Changes</h2>
 <ul>
@@ -518,6 +536,346 @@
   <li>Normals no longer do chip damage.</li>
   <li>Hurtbox expanded on his sword normals.</li>
   <li>Hurtbox around his arm on his sword normals appear one frame before the hitbox.</li>
+</ul>
+<h3>Squall</h3>
+<ul>
+  <li>Normals no longer do chip damage.</li>
+  <li>Standing Light Punch:</li>
+  <ul>
+    <li>Shrunk the hurtbox around his arm.</li>
+  </ul>
+  <li>Close Light Kick:</li>
+  <ul>
+    <li>Pushback increased.</li>
+  </ul>
+  <li>Standing Heavy Kick:</li>
+  <ul>
+    <li>Hurtbox expanded.</li>
+    <li>Hurtbox appears one frame before the hitbox.</li>
+  </ul>
+  <li>Crouching Heavy Kick:</li>
+  <ul>
+    <li>Hurtbox expanded.</li>
+    <li>Hurtbox appears one frame before the hitbox.</li>
+  </ul>
+  <li>Forward Heavy Punch:</li>
+  <ul>
+    <li>Hurtbox around his arm expanded.</li>
+  </ul>
+</ul>
+<h3>Rainbow Dash</h3>
+<ul>
+  <li>Health and Stun increased from 850 to 900.</li>
+  <li>Crouching Heavy Punch:</li>
+  <ul>
+    <li>Fixed the counter-hit property on rebound.</li>
+    <li>Horizontal speed on rebound increased.</li>
+  </ul>
+  <li>Standing Heavy Punch:</li>
+  <ul>
+    <li>Removed pushback on the first hit.</li>
+    <li>Pushback on the second hit increased.</li>
+  </ul>
+  <li>Jumping Heavy Punch:</li>
+  <ul>
+    <li>Hitstun and blockstun reduced by 6 frames and 5 frames respectively. Landing recovery increased by 2 frames. This fixes the flight cancel infinite on grounded opponents.</li>
+  </ul>
+</ul>
+<h3>Rock</h3>
+<ul>
+  <li>Back walkspeed increased.</li>
+  <li>Standing Light Punch:</li>
+  <ul>
+    <li>Removed the hurtbox around his arm.</li>
+  </ul>
+  <li>Standing Heavy Punch:</li>
+  <ul>
+    <li>Damage reduced, from 130 to 120.</li>
+  </ul>
+  <li>Added a new move, far light kick. Standing light kick changed to a close normal.</li>
+  <li>Added a new move, close heavy punch. Standing heavy punch changed to a far normal.</li>
+  <li>Added a new move, close heavy kick. Standing heavy kick changed to a far normal.</li>
+  <li>Crouching Heavy Kick:</li>
+  <ul>
+    <li>Juggle potential increased from 4 to 5.</li>
+  </ul>
+  <li>Jumping Light Kick:</li>
+  <ul>
+    <li>No longer causes a knockdown against airborne.</li>
+  </ul>
+  <li>Throw:</li>
+  <ul>
+    <li>Reduced the ability to juggle off of it.</li>
+  </ul>
+  <li>Shinkuu Nage:</li>
+  <ul>
+    <li>Increased the ability to juggle off of it.</li>
+  </ul>
+  <li>Reppuken:</li>
+  <ul>
+    <li>Hitbox made lower to the ground.</li>
+  </ul>
+</ul>
+<h3>Geese</h3>
+<ul>
+  <li>Reppuken:</li>
+  <ul>
+    <li>Hitbox made lower to the ground.</li>
+  </ul>
+</ul>
+<h3>Iori:</h3>
+<ul>
+  <li>Projectile:</li>
+  <ul>
+    <li>Hitbox made lower to the ground.</li>
+  </ul>
+</ul>
+<h3>Jon Talbain</h3>
+<ul>
+  <li>Close Light Punch:</li>
+  <ul>
+    <li>Pushback increased.</li>
+  </ul>
+  <li>Crouching Light Punch:</li>
+  <ul>
+    <li>Shrunk hitbox.</li>
+  </ul>
+  <li>Crouching Heavy Punch:</li>
+  <ul>
+    <li>Shrunk the size of the hitbox horizontally.</li>
+  </ul>
+  <li>Forward Heavy Kick:</li>
+  <ul>
+    <li>Recovery increased by 6 frames, now -4 on block.</li>
+  </ul>
+  <li>Climb Laser:</li>
+  <ul>
+    <li>Sped up the animation.</li>
+    <li>Active frames reduced, from 11 to 6.</li>
+  </ul>
+  <li>Dragon Cannon:</li>
+  <ul>
+    <li>Changed to do only one hit.</li>
+    <li>Cannot be nullified by projectiles.</li>
+  </ul>
+</ul>
+<h3>Rolento</h3>
+<ul>
+  <li>Taunt:</li>
+  <ul>
+    <li>Recovery increased.</li>
+  </ul>
+  <li>Crouching Heavy Punch:</li>
+  <ul>
+    <li>Reduced hit-freeze.</li>
+  </ul>
+  <li>Air Light Punch:</li>
+  <ul>
+    <li>Reduced hit-freeze.</li>
+  </ul>
+  <li>Trick Rod:</li>
+  <ul>
+    <li>Changed to an overhead.</li>
+    <li>Moves forward during start-up.</li>
+  </ul>
+  <li>Patriot Circle:</li>
+  <ul>
+    <li>Reduced hit-freeze on all versions.</li>
+  </ul>
+  <li>Stinger:</li>
+  <ul>
+    <li>Hitstun and blockstun reduced by 3 frames.</li>
+  </ul>
+</ul>
+<h3>Sagat</h3>
+<ul>
+  <li>Tiger Uppercut:</li>
+  <ul>
+    <li>Invincibility extended, from frames 1-5 to frames 1-8.</li>
+  </ul>
+</ul>
+<h3>Ryuji</h3>
+<ul>
+  <li>Standing Light Punch:</li>
+  <ul>
+    <li>Shrunk the hurtbox around his arm.</li>
+  </ul>
+</ul>
+<h3>Yuri</h3>
+<ul>
+  <li>Walkspeed increased slightly.</li>
+  <li>Standing Heavy Punch:</li>
+  <ul>
+    <li>Changed the origin point. Hurtbox and hitbox unchanged, but range is increased.</li>
+  </ul>
+</ul>
+<h3>Ibuki</h3>
+<ul>
+  <li>Walkspeed slightly increased.</li>
+  <li>Standing Heavy punch:</li>
+  <ul>
+    <li>Added forward movement during start-up, and back movement during recovery.</li>
+  </ul>
+  <li>Spin Kick:</li>
+  <ul>
+    <li>Hitstun reduced by 1 frame, now +2 on hit. Can no longer combo into HK Tsumuji.</li>
+  </ul>
+  <li>Backhand Punch:</li>
+  <ul>
+    <li>Added back movement during recovery.</li>
+  </ul>
+  <li>Tsumuji:</li>
+  <ul>
+    <li>Pushback in the corner increased on the light and heavy versions.</li>
+  </ul>
+</ul>
+<h3>Snake</h3>
+<ul>
+  <li>Standing Light Punch:</li>
+  <ul>
+    <li>Shrunk the hurtbox around his arm.</li>
+  </ul>
+</ul>
+<h3>Athena</h3>
+<ul>
+  <li>Crouching Heavy Punch:</li>
+  <ul>
+    <li>Added a hurtbox around her arm.</li>
+  </ul>
+  <li>Psycho Reflector:</li>
+  <ul>
+    <li>Input changed from half-circle backwards to quarter-circle backwards.</li>
+  </ul>
+</ul>
+<h3>Guy</h3>
+<ul>
+  <li>Bushin Muso Renge:</li>
+  <ul>
+    <li>No longer teleports to the center of the stage when it connects.</li>
+  </ul>
+</ul>
+<h3>Bison</h3>
+<ul>
+  <li>Double Knee Press:</li>
+  <ul>
+    <li>Increased pushback in the corner.</li>
+  </ul>
+  <li>Head Press:</li>
+  <ul>
+    <li>Shrunk hitbox horizontally.</li>
+  </ul>
+  <li>Somersault Skull Diver:</li>
+  <ul>
+    <li>Now auto-corrects if you start it facing the wrong way.</li>
+  </ul>
+</ul>
+<h3>Nakoruru</h3>
+<ul>
+  <li>Close Heavy Punch:</li>
+  <ul>
+    <li>Hitstun and blockstun on the first hit reduced by 5 frames.</li>
+  </ul>
+  <li>ChiTenZan:</li>
+  <ul>
+    <li>Hitstun and blockstun reduced by 8 frames, now -2/-2.</li>
+  </ul>
+  <li>Mamahaha Grab:</li>
+  <ul>
+    <li>Cancel window into follow-ups moves, from frame 17 to frame 22.</li>
+  </ul>
+</ul>
+<h3>Captain Commando</h3>
+<ul>
+  <li>Walkspeed increased slightly.</li>
+  <li>Captain Sword:</li>
+  <ul>
+    <li>Animation on hit reduced in length.</li>
+  </ul>
+</ul>
+<h3>Applejack</h3>
+<ul>
+  <li>Health and Stun increased, from 950 to 1000.</li>
+  <li>Walkspeed increased slightly.</li>
+  <li>Crouching Light Kick:</li>
+  <ul>
+    <li>Recovery reduced by 2 frames, now +7/+4.</li>
+  </ul>
+  <li>New move: Far Heavy Kick. Standing heavy kick changed to a close normal.</li>
+  <li>New move: Quick Step (QCF + P). Acts as a command dash. LP version is faster, HP version is slower but can pass through opponents.</li>
+  <li>New move: Sway (QCB + P). Applejack quickly dashes backwards, has strike invincibility frames at the start.</li>
+  <li>New move: EX Applebuck.</li>
+  <li>Lasso: Button input changed from punches to kicks.</li>
+  <li>Bionic Farm:</li>
+  <ul>
+    <li>Input changed from QCF + KK to QCF + PP.</li>
+  </ul>
+</ul>
+<h3>Zero</h3>
+<ul>
+  <li>Throw:</li>
+  <ul>
+    <li>Limited the ability to combo after.</li>
+  </ul>
+  <li>Shippuga:</li>
+  <ul>
+    <li>Can no longer be cancelled into Buster Shot.</li>
+  </ul>
+  <li>Genmu Zero:</li>
+  <ul>
+    <li>Can no longer combo afterwards.</li>
+  </ul>
+</ul>
+<h3>Elena</h3>
+<ul>
+  <li>Throw:</li>
+  <ul>
+    <li>Range increased.</li>
+  </ul>
+  <li>EX Spin Scythe:</li>
+  <ul>
+    <li>Fixed the move gaining meter on hit.</li>
+  </ul>
+  <li>EX Lynx Tail:</li>
+  <ul>
+    <li>Final hit no longer hits low.</li>
+  </ul>
+</ul>
+<h3>Rarity</h3>
+<ul>
+  <li>Health increased, from 900 to 950.</li>
+  <li>Stun increased, from 850 to 950.</li>
+  <li>Crouching Heavy Punch:</li>
+  <ul>
+    <li>Fixed the air crush property so it only covers frames 9-15 instead of the entire move.</li>
+  </ul>
+</ul>
+<h3>Kula</h3>
+<ul>
+  <li>All normal attacks (aside from close heavy kick, crouching heavy kick, jumping heavy kick and Slider Shoot) cause an air reset.</li>
+  <li>Close Heavy Kick:</li>
+  <ul>
+    <li>Juggle potential changed, from 4 to 1.</li>
+    <li>Juggle cost adjusted, 0 for the first hit and 1 for the second.</li>
+  </ul>
+  <li>Crouching Heavy Punch:</li>
+  <ul>
+    <li>Shrunk the hitbox horizontally.</li>
+  </ul>
+</ul>
+<h3>Sonson</h3>
+<ul>
+  <li>Close Heavy Punch:</li>
+  <ul>
+    <li>Pushback increased.</li>
+  </ul>
+  <li>Close Heavy Kick:</li>
+  <ul>
+    <li>Pushback increased.</li>
+  </ul>
+  <li>Forward Heavy Punch:</li>
+  <ul>
+    <li>Shrunk the hitbox horizontally.</li>
+  </ul>
 </ul>
 </div>
 </div>

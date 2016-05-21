@@ -9,18 +9,37 @@
   <li>When you go into training mode, you can move the characters as soon as it starts rather than waiting for character entrances to finish.</li>
   <li>Added UI options to the victory screen in both Arcade mode and Versus, for continuing/rematching or quitting/returning to character select.</li>
   <li>The Versus and Credits screens will automatically proceed to the next part after a certain period of time.</li>
+  <li>Added a Survival mode. Infinite number of matches, you get a small health boost at the end of each round. Every 10 rounds you fight a boss and the difficulty increases slightly (though the boss characters won't have the powered up moves like they do in Arcade mode). The game also saves your records for each character in a new .ini file (this is created by the game if the file doesn't exist).</li>
   <li>Fixed trades to cause hit-freeze equal to whichever move that connected has the higher amount, rather than defaulting to whatever amount of hit-freeze player 1's attack had.</li>
   <li>Fixed an issue where you wouldn't guard in the right direction on the first frame of wake-up if the opponent was crossing over you.</li>
+  <li>Fixed an issue where if you tech rolled, or rolled on wake-up, your stun/guard wouldn't decrease properly.</li>
+  <li>Made it so that if you X-Counter of Just Defend, your guard and stun meter start decreasing immediately, similar to when you parry.</li>
   <li>Fixed an issue where if you trade with projectiles, and only one of the players is KO'd as a result, there would be an error message after the KO screen.</li>
   <li>Fixed an issue with Ryo's AI that would cause an error message when doing a corner combo.</li>
   <li>Adjusted Dudley's, Sakura's, and Blaziken's AI so they'll do certain combos more consistently.</li>
   <li>Adjusted Dan's AI so he won't cancel out of a standing heavy punch before it connects.</li>
+  <li>Adjusted Jin's AI so he will properly use far light kick when counter-poking instead of close light kick.</li>
   <li>AI will now quickstand if they can when they're knocked down. The higher the difficulty, the more likely they will quickstand.</li>
+  <li>Adjusted the frequency the AI blocks based on difficulty.</li>
+  <li>AI will now sometimes neutral jump at a certain range if you try to grab them.</li>
+  <li>Added Yun as an AI opponent.</li>
 </ul>
 <h2 id="Basics">Character Changes</h2>
 <h3>Sakura</h3>
 <ul>
   <li>Fixed her Dodge Attack/X-Counter not working properly.</li>
+</ul>
+<h3>Athena</h3>
+<ul>
+  <li>Fixed the grab effect not mirroring properly when performing a back throw.</li>
+</ul>
+<h3>Zangief</h3>
+<ul>
+  <li>Spinning Piledriver:</li>
+  <ul>
+    <li>Range on the LP version reduced:<br><%= image_tag "zangief/hcblp.png" %><%= image_tag "zangief/hcblp107.png" %></li>
+    <li>Range on the HP version reduced:<br><%= image_tag "zangief/hcbhp.png" %><%= image_tag "zangief/hcbhp107.png" %></li>
+  </ul>
 </ul>
 </div>
 <h1 id="Name">Version 1.06 (Released 5-7-2016)</h1>

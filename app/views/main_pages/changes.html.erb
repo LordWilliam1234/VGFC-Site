@@ -1,5 +1,142 @@
 <% provide(:title, "Version History") %>
 <div id="FighterPage">
+<h1 id="Name">Version 1.09 (Release TBD)</h1>
+<div class="MainInfo">
+<h2 id="Basics">Global Changes</h2>
+<ul>
+  <li>Re-wrote the input system. This removes one frame of input delay when using controllers.</li>
+  <li>If you have a controller for Player 1 plugged in, the keyboard controls for player 1 are disabled. If you have a controller for Player 2 plugged in, the keyboard controls for player 2 are disabled. This is to prevent a player on keyboard messing with the controls of a player using a controller. Main menu options can still be controlled with the keyboard while controllers are plugged in, however.</li>
+  <li>Added more options to the hitbox display. You can now display the hitboxes as all filled in, all outline, or a mix of the two (hurtboxes are filled in but the hitboxes are outlines).</li>
+  <li>Added infinite meter and counter-hit options to training mode. Also added a random guard option.</li>
+  <li>Doubled the health bonus you get at the end of each round in Survival.</li>
+  <li>Bosses in Survival now appear every 7 rounds instead of 10. Likewise, the difficulty goes up every 7 rounds instead of 10. (Artwork bonuses remain the same as before in terms o the number of stages you need to complete per character)</li>
+  <li>Tech rolls are now fully vulnerable at the end.</li>
+  <li>Reduced the travel speed of tech rolls.</li>
+</ul>
+<h2 id="Basics">Character Changes</h2>
+<h3>Akuma</h3>
+<ul>
+  <li>Changed his overhead so that you cannot cancel it until the 2nd hit.</li>
+  <li>Health and Stun increased, from 850 to 950.</li>
+</ul>
+<h3>Rarity</h3>
+<ul>
+  <li>Normal Throw</li>
+  <ul>
+    <li>No longer causes a hard knockdown.</li>
+  </ul>
+  <li>Fixed her Ultra so that the Ultra state doesn't carry over to the first move performed after the Ultra ends.</li>
+</ul>
+<h3>Haohmaru</h3>
+<ul>
+  <li>Fixed the proximity on close heavy punch vs far heavy punch.</li>
+  <li>Kogetsu Zan</li>
+  <ul>
+    <li>Hitbox on the 2nd hit expanded downwards so it own't whiff on short standing characters.</li>
+  </ul>
+  <li>Hiougi TenHa FuJin Zan</li>
+  <ul>
+    <li>Hitbox on the final hit expanded downwards so it won't whiff on short standing characters.</li>
+  </ul>
+</ul>
+<h3>Hibiki</h3>
+<ul>
+  <li>Crouching Heavy Punch</li>
+  <ul>
+    <li>Sends the opponent higher if it hits them while they're airborne.</li>
+  </ul>
+  <li>Distance Slash</li>
+  <ul>
+    <li>Pushback reduced on all versions.</li>
+    <li>Damage of the heavy version reduced, from 140 to 120.</li>
+    <li>Blockstun of the heavy version reduced by 5 frames, now -18 on block.</li>
+  </ul>
+  <li>Normal Throw</li>
+  <ul>
+    <li>No longer causes a hard knockdown.</li>
+    <li>Animation ends earlier.</li>
+    <li>Damage/stun increased, from 100 to 120.</li>
+  </ul>
+</ul>
+<h3>Terry</h3>
+<ul>
+  <li>Normal Throw</li>
+  <ul>
+    <li>Reduced the ability to juggle off of it.</li>
+  </ul>
+  <li>Burn Knuckle</li>
+  <ul>
+    <li>No longer causes a hard knockdown.</li>
+  </ul>
+  <li>Power Geyser</li>
+  <ul>
+    <li>Fixed the active frames so it doesn't last until the move ends.</li>
+  </ul>
+  <li>Buster Wolf</li>
+  <ul>
+    <li>Fixed the hitbox so it doesn't hit full screen (left over from debugging)</li>
+  </ul>
+</ul>
+<h3>Applejack</h3>
+<ul>
+  <li>Fixed crouching light kick so it can no lnoger be cancelled into standing light punch, crouching light punch, or standing light kick.</li>
+  <li>Jumping Light Kick</li>
+  <ul>
+    <li>Hitbox expanded backwards so it works as a cross-up.</li>
+  </ul>
+  <li>Normal Throw</li>
+  <ul>
+    <li>No longer causes a hard knockdown.</li>
+    <li>Tech window reduced.</li>
+    <li>Floats higher and the opponent ends closer, throw animation recovers faster.</li>
+  </ul>
+  <li>EX Applebuck</li>
+  <ul>
+    <li>Fixed it so that if you extend the attack against a cornered opponent, the pushback applied to Applejack is cancelled out properly once you're pushed out of range.</li>
+  </ul>
+</ul>
+<h3>Rock</h3>
+<ul>
+  <li>Fixed Close Heavy Kick and Close Heavy Punch so they can't be cancelled into standing or crouching light punch.</li>
+</ul>
+<h3>Pinkie Pie</h3>
+<ul>
+  <li>Health and stun increased, from 900 to 950.</li>
+  <li>Jumping Light Kick</li>
+  <ul>
+    <li>Pushbox shrunk vertically.</li>
+  </ul>
+  <li>Jumping Heavy Punch</li>
+  <ul>
+    <li>Pushbox shrunk vertically.</li>
+  </ul>
+</ul>
+<h3>Jill Valentine</h3>
+<ul>
+  <li>Normal Throw</li>
+  <ul>
+    <li>Floats a bit higher.</li>
+    <li>No longer causes a hard knockdown.</li>
+  </ul>
+</ul>
+<h3>Jon Talbain</h3>
+<ul>
+  <li>Forward and Backward walk no lowers his hurtbox down to crouching height.</li>
+  <li>Normal Throw</li>
+  <ul>
+    <li>Floats a bit higher, doesn't toss the opponent as far.</li>
+    <li>No longer causes a hard knockdown.</li>
+  </ul>
+  <li>Close Light Punch</li>
+  <ul>
+    <li>Pushback increased.</li>
+  </ul>
+  <li>Standing Light Punch</li>
+  <ul>
+    <li>Pushback increased.</li>
+  </ul>
+</ul>
+</div>
 <h1 id="Name">Version 1.08 (Released 5-30-2016)</h1>
 <div class="MainInfo">
 <h2 id="Basics">Global Changes</h2>

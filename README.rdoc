@@ -1,3 +1,1 @@
-Copy the full app and run "rails server," follow the link provided and things should be good to go.
-
-Alternatively, check out the heroku link at https://vgfc-worlds-collide.herokuapp.com/
+This site is also hosted on heroku. To view, go to https://vgfc-worlds-collide.herokuapp.com/ 

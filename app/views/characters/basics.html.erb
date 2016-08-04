@@ -1,0 +1,64 @@
+<% provide(:title, "Basics") %>
+<div id="FighterPage">
+
+<h2 id="Char">The Game UI</h2>
+
+<%= image_tag "info/matchsample.png" %>
+<p>When playing a match in VGFC, there are several different meters on screen that you'll need to keep track of, in addition to your characters. This section will go into more detail on each of these different meters.</p>
+
+<h2 id="Char">Health Meter</h2>
+
+<p>This is the easiest one to identify, it's the large green meter at the top of the screen. When this meter is completely drained, your character is KO'd and you lose a round. The player to first reach the designated number of rounds wins that match. The number of rounds you play depends on the game mode you select; Normal/Honest is best of 2, Yolo is best of 5, and Teams is best of 3.</p>
+
+<h3>Health Values</h3>
+
+<p>Every character in the game has their own health value. This dictates how much damage a character can take before they're KO'd. So despite the health bars being the same length visually, not every character has the same health.</p>
+
+<h2 id="Char">Stun Meter</h2>
+
+<p>In addition to each character's health meter, each character also has a stun meter. As you get hit by attacks, this meter will fill up according to that attack's stun value (see each character's page for info on how much stun each attack deals). Once this meter is full, your character will fall dizzy. A character that falls dizzy is invincible until they get up again, at which point they're stuck in the dizzy state for an extended period; characters are completely vulnerable while dizzy.</p>
+
+<p>The dizzy meter doesn't increase when you block, but it does stop decreasing in this instance. In order to get the stun meter to start draining, you have to avoid coming in contact with any attacks for at least one second, at which point it will start draining very slowly.</p>
+
+<p>Below you can find a table listing every character's health and stun values; you can click on the headers to sort it by each category. Note that, much like the health meter, each character has different stun values (so some get dizzy easier than others).</p>
+
+<table id="Term" class="DataTable">
+  <tr>
+    <th><%= sortable "name", "Character Name" %></th>
+    <th><%= sortable "health", "Character Health" %></th>
+    <th><%= sortable "stun", "Character Stun" %></th>
+  </tr>
+  <% for character in @characters %>
+  <tr>
+    <td><%= character.name %></td>
+    <td><%= character.health %></td>
+    <td><%= character.stun %></td>
+  </tr>
+  <% end %>
+</table>
+
+<h2 id="Char">Guard Meter</h2>
+
+<p>Next to the stun meter is another bar, the guard meter. Unlike the health and stun meters, every character has a value of 1000 for their guard meter. Every time you block an attack, unless that attack is a light attack, it increases this meter by an amount equal to the strength of the opponent's attack (with a few exceptions). If an attack causes this meter to fill up, you will enter a guard crush state; your character will crumple and you will be completely vulnerable for a while. Much like the stun meter, the guard meter will only start draining if you avoid coming into contact with other moves for about a second, and stops draining if you get hit or block an attack.</p>
+
+<h2 id="Char">Super Meter</h2>
+
+<p>This is an important meter, as it's the meter that gives you access to all of your EX and Super moves. It's divided into 3 sections; you can have a maximum of 1200 points worth of Super Meter, and each individual section is worth 400 points. In each character's frame data you can see how much meter a move builds or requires; 400 points for one bar, 800 points for two and 1200 points for three.</p>
+
+<p>You start out every match with no super meter, but this meter is carried over between rounds. You build meter by attacking or getting attacked; you get the most meter from actually hitting the opponent, but you also get some meter from having your attacks blocked, getting hit yourself, blocking your opponents attacks, or just performing moves (other than light attacks).</p>
+
+<h2 id="Char">Ultra Meter</h2>
+
+<p>Another bar next to your super meter. This serves only one purpose; to perform Ultra combos. The only way to build this meter is by dealing damage. Once this meter is at least halfway full, you are able to perform an Ultra combo.</p>
+
+<p>The value of Ultras are equal to the total life your opponent has. So when fighting Ryu, who has 1000 health, you need to deal 500 damage total in order to be able to perform your Ultra combo. If you're fighting Yun, who has 850 health, you only need to deal 425 damage.</p>
+
+<h2 id="Char">The Timer</h2>
+
+<p>The large numbers in between each health bar. It's pretty simple; it counts down every second, and once it hits zero, the game ends. The player that has the highest percentage of life left at this point wins that round.</p>
+
+<p>So, for example, Zangief is fighting Megaman. Zangief has 350HP left while Megaman has 300HP. 350/1100 = 31.8%, 300/900=33.3%. So even though Zangief has more life left total, Megaman has the highest percentage of life left, so Megaman will win that round.</p>
+
+<p>In any case that both players have the same percentage of life left, both players will lose that round. If it's the final round and this happens, the match will end in a draw.</p>
+
+</div>

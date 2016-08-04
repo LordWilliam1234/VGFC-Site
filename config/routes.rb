@@ -1,6 +1,11 @@
 Rails.application.routes.draw do
+  get 'characters/new'
+
+  get 'chars_health/new'
+
   root 'main_pages#home'
   get 'changes' => 'main_pages#changes'
+  get 'basics' => 'characters#basics'
   get 'terms' => 'main_pages#terms'
   get 'ryu' => 'fighters#ryu'
   get 'kim' => 'fighters#kim'

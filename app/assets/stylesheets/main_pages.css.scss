@@ -165,3 +165,23 @@ nav {
   padding-top: 0.5em;
   text-decoration: underline;
 }
+
+table.DataTable {
+  border: 1px solid gray;
+  background-color: rgba(0,0,0,0.5);
+  margin-right: 3em;
+  font-family: 'Arial', sans-serif;
+  font-size: 14px;
+  td {
+    text-align: center;
+    width: 13em;
+    height: 1.5em;
+    border: 1px solid gray;
+  }
+  th {
+    text-align: center;
+    width: 13em;
+    height: 1.5em;
+    border: 1px solid gray;
+  }
+}

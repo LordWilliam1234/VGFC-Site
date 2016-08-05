@@ -17,8 +17,10 @@ ActiveRecord::Schema.define(version: 20160804175731) do
     t.string   "name"
     t.integer  "health"
     t.integer  "stun"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.decimal  "forwardwalk"
+    t.decimal  "backwalk"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
 end

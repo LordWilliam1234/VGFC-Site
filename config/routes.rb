@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   root 'main_pages#home'
   get 'changes' => 'main_pages#changes'
   get 'basics' => 'characters#basics'
+  get 'universal' => 'characters#universal'
   get 'terms' => 'main_pages#terms'
   get 'ryu' => 'fighters#ryu'
   get 'kim' => 'fighters#kim'

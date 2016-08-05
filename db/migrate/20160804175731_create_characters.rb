@@ -4,6 +4,8 @@ class CreateCharacters < ActiveRecord::Migration
       t.string :name
       t.integer :health
       t.integer :stun
+      t.decimal :forwardwalk
+      t.decimal :backwalk
 
       t.timestamps null: false
     end

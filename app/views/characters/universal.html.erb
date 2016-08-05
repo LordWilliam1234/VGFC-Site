@@ -1,0 +1,113 @@
+<% provide(:title, "Universal") %>
+<div id="FighterPage">
+
+<h2 id="Char">Basic Movement</h2>
+
+<p>As far as the general movement options in the game, VGFC plays out more like a traditional Street Fighter game, with walking, dashing, and jumping. This section will go into more detail on these.</p>
+
+<h3>Walking</h3>
+
+<p>The simplest form of movement; just hold towards the opponent to walk forward, and away from them to walk backward.</p>
+
+<p>Each character has a different speed at which they walk; some are slow, while others are very fast. Below is a table with each character's walk values (click on the headers to sort it by that value by ascending order, and again for descending). The walk values are in pixels per frame; if a character has a walkspeed value of 6, it will move 6 pixels in that direction per frame. VGFC runs at 60 frames per second, and the standard window size is 800x448.</p>
+
+<table class="DataTable">
+  <tr>
+    <th><%= sortable "name", "Character Name" %></th>
+    <th><%= sortable "forwardwalk", "Forward Walk" %></th>
+    <th><%= sortable "backwalk", "Back Walk" %></th>
+  </tr>
+  <% for character in @characters %>
+  <tr>
+    <td><%= character.name %></td>
+    <td><%= character.forwardwalk %></td>
+    <td><%= character.backwalk %></td>
+  </tr>
+  <% end %>
+</table>
+
+<h3>Dashing</h3>
+
+<p>Each character also has a forward dash and a backdash, performed by pressing <%= image_tag "info/right.png" %> <%= image_tag "info/right.png" %> for a forward dash, and <%= image_tag "info/left.png" %> <%= image_tag "info/left.png" %> for a backdash (note, command notations like these assume that your character is facing right, if you're facing left the commands are reversed). Neither of these has any invincibility and is used to get across the screen faster than simply walking. You cannot perform any actions during a dash, so you are committed to it once you perform it. The majority of the cast is also in a grounded state while dashing, so you run the risk of dashing straight into an attack; the few characters that have airborne forward/backdashes will go into an airborne state instead though, which makes it harder to punish.</p>
+
+<h3>Jumping</h3>
+
+<p>In addition to dashing, you can also jump. Hold <%= image_tag "info/up.png" %> for a neutral jump, <%= image_tag "info/upright.png" %> to jump forward, and <%= image_tag "info/upleft.png" %> to jump backward. This is useful for getting over certain projectiles and it can lead into massive damage if you manage to land a jumping attack; however, you cannot block or change your trajectory during a jump once you perform one, you can only attack out of it.</p>
+
+<p>Worth noting as well, that if you perform an attack out of the air, you have a very small period of recovery when you land where you cannot do anything. It only lasts for 2 frames so it's almost non-existant, but it is there; so if you jump into an opponent performing a low attack and you did a jumping attack, you will be unable to guard it when you land.</p>
+
+<h2 id="Char">Blocking</h2>
+
+<p>Another simple concept; hold <%= image_tag "info/left.png" %> to block overhead and mid attacks, and <%= image_tag "info/downleft.png" %> to block mid and low attacks. If you attempt to block standing against low attacks, or block low against overhead attacks, you will still get hit. In addition, you cannot block throws.</p>
+
+<h3>Proximity Blocking</h3>
+
+<p>If you're holding <%= image_tag "info/left.png" %> and the opponent is performing attacks (or has a projectile on screen), you will enter a guarding state and stop walking backwards, regardless of the distance you are from the opponent. If you want to move away from a projectile coming at you or an opponent constantly throwing out attacks, you can still backdash.</p>
+
+<h3>Blockstun</h3>
+
+<p>When you succesfully block an attack, you will be stuck for a certain period of time, unable to do anything but continue blocking. This is known as blockstun. If an opponent hits you with an attack while you are still in blockstun, and you are still blocking, you will be put back into blockstun and cannot retaliate. This is known as a blockstring, and is essentially a combo against someone who is blocking.</p>
+
+<p>If you stop guarding at any point during blockstun, even if the opponent is still attacking and you were still in blockstun, you will stop blocking. So if an opponent does a normal attack cancelled into a special move, and the two moves form a blockstring, if you stop blocking between the two moves, you will get hit by the second attack.</p>
+
+<h2 id="Char">Normal Attacks</h2>
+
+<p>This is the standard attack set that every character has. You have four attack buttons: Light Punch, Light Kick, Heavy Punch, and Heavy Kick. You can perform attacks with each of these buttons while standing, crouching, or during a jump, giving you many different attacks to use.</p>
+
+<p>In addition to your standard normal attacks, many characters also have Unique Attacks, which are similar to normal moves but are usually performed with an additional direction and often have additional properties, such as Ryu's Collarbone Breaker; performed with <%= image_tag "info/right.png" %> + <%= image_tag "info/lp.png" %>, a two-hitting overhead attack.</p>
+
+<p>Check each character's page for more information on each of their normal and unique attacks.</p>
+
+<h2 id="Char">Special Moves</h2>
+
+<p>Every character also has special moves they can perform alongside their normal attacks. Special Moves require specific joystick motions in addition to a button input (such as <%= image_tag "info/qcf.png" %> + <%= image_tag "info/punch.gif" %> for Ryu's Hadoken), and often have very unique properties attached to them, such as being projectiles, having invincibility of some kind or causing special hit states.</p>
+
+<h3>EX Special Moves</h3>
+
+<p>Some special moves also have EX versions; these cost 1 bar of meter and are performed with two buttons instead of one, and have additional properties that make them stronger than the regular version, such as Ryu's EX Joudan Sokutogeri causing a wall bounce when it hits.</p>
+
+<h3>Chip Damage</h3>
+
+<p>While the properties of special moves vary a lot, they all share one thing in common; they all cause damage even if the opponent blocks the attack. This damage is 25% of the full damage that the move causes. So even if you block a move, if you don't have enough health left, you will still be KO'd.</p>
+
+<h2 id="Char">Super Moves</h2>
+
+<p>Every character has Super Moves in addition to their special moves. They are similar to EX moves, performed with 2 buttons instead of one, but often have either extremely good properties or do massive damage. They can cost anywhere between 1 bar for weaker supers (such as Ryu's Shinkuu Hadoken), or 3 bars for the best ones (such as Akuma's Raging Demon). Super moves also cause chip damage like Special Moves.</p>
+
+<h2 id="Char">Ultra Moves</h2>
+
+<p>Ultra moves generally have similar properties to Super Moves, but are tied to the Ultra meter instead of the Super meter.</p>
+
+<h2 id="Char">The Wake-up Game</h2>
+
+<p>"Wake-up" refers to the situation when your character is knocked down. There are several options that a character has in these situations, and this section will go over all of them.</p>
+
+<h3>Getting knocked down</h3>
+
+<p>When your character is knocked into the air, when they finally land, they will be put into a knockdown state. If you do not perform any of the get-up options (see below), or the attack you were hit by causes a hard knockdown (also see below), you will hit the ground and stay there for a short period. During this period, you are completely invincible to most attacks. The exception to this, however, is attacks that can hit OTG (off the ground), which will hit you even if you are in a knockdown state. More on this later.</p>
+
+<p>After a short period, if you don't input anything, your character will get up off of the ground. At this point, the opponent's combo counter is reset and your character is completely invincible to any attack while getting up off of the ground. Once the get-up animation completes, your character becomes vulnerable again and you can perform any action.</p>
+
+<h3>Quick-standing/Tech-rolling</h3>
+
+<p>If you suffer a knockdown, if you input <%= image_tag "info/down.png" %> or <%= image_tag "info/lp.png" %> + <%= image_tag "info/lk.png" %> just before you land, you will perform a quick-stand. A quick-stand has the same properties as getting up after a knockdown (including full invincibility), except you perform it immediately; this will let you avoid being hit by attacks that can hit OTG.</p>
+
+<p>If you hold <%= image_tag "info/left.png" %> or <%= image_tag "info/right.png" %> and press <%= image_tag "info/lp.png" %> + <%= image_tag "info/lk.png" %> just before hitting the ground (or, more simply, <%= image_tag "info/downleft.png" %> or <%= image_tag "info/downright.png" %>), you will perform a tech roll in that direction. Tech rolls last the same amount of time as a normal get-up, except you are moving during it. However, while you are completely invincible at the start, towards the end of a tech roll you become completely vulnerable, so you can be hit out of a tech roll and will be unable to do anything. So tech rolls can be used to escape set-ups but can be heavily punished if the opponent makes the appropriate guess.</p>
+
+<h3>Hard Knockdowns and Wake-up Rolls</h3>
+
+<p>Some moves are designated to cause a hard knockdown when they connect (such as many Super Moves). A hard knockdown is similar to a regular knockdown, but with one major difference; you cannot perform a quick-stand or a tech-roll when you hit the ground. This leaves you completely vulnerable to OTG attacks. However, normal get-up will remain the same as before.</p>
+
+<p>If you hold <%= image_tag "info/lp.png" %> and either <%= image_tag "info/left.png" %> or <%= image_tag "info/right.png" %> while in a knockdown state (either from a regular knockdown or a hard knockdown), you will perform a wake-up roll in that direction. This is very similar to a tech-roll, except you roll farther and have a slightly shorter vulnerability period at the end.</p>
+
+<h3>OTG</h3>
+
+<p>This is a special property that some attacks have, which lets you hit an opponent even if they are in a knockdown state. Most OTGs pop the opponent back up into the air allowing you to continue a combo. However, you can only hit with one OTG attack per combo; if you hit the opponent during a knockdown state and try and do it again during the same combo, your attack will not hit at all. Once the opponent gets up/tech rolls, this is reset and you will be able to hit with another OTG on the next knockdown.</p>
+
+<h2 id="Char">Reversals</h2>
+
+<p>Reversals are moves that are performed on the very first frame that you are able to perform an attack after either being hit, blocking, or getting up off of the ground. Special Moves, Super Moves, and Ultra Moves can all be performed as reversals; if the button is pressed within 6 frames of you being able to perform an action (you can buffer the joystick motion earlier than those 6 frames; the timing only matters for the button input itself), the attack will happen automatically on the first frame you would normally be able to perform other actions. This lets you use invincible special moves to get out of sticky situations, such as Ryu's Shoryuken. Note, however, that reversals out of hitstun and blockstun will only be performed after hitstun or blockstun has ended; if the opponent is performing a combo or a blockstring you can try and input a reversal, but nothing will happen.</p>
+
+<p>Remember that reversals can only be performed after hitstun, blockstun, or normal get-ups. You cannot perform reversals after a tech roll or a wake-up roll.</p>
+
+</div>

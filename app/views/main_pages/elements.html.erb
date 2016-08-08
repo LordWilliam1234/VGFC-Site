@@ -1,0 +1,70 @@
+<% provide(:title, "Elements") %>
+<div id="FighterPage">
+
+<h2 id="Char">Counter Hits</h2>
+
+<p>If you hit the opponent during the start-up of their attack, you will cause a Counter Hit. Counter Hits are similar to normal hits but generally have added bonuses. The general bonus is you get 25% more damage added to that attack, but some moves do more. Most normal attacks add 1 or 3 frames of extra hitstun (light attacks generally have 1 while any other attack class will have 3, unless it causes a different hit state). However, some attacks have special Counter Hit properties, such as causing wall bounces, ground bounces, or crumple states. Thus those moves have a very strong reward if you manage to land a counter-hit with it.</p>
+
+<p>If you counter-hit someone who is airborne, your move will cause a knockdown state (unless it's designated to cause a different property against airborne). This lets you anti-air someone and possibly get a combo off of it if you hit them before their attack comes out.</p>
+
+<p>If you hit someone with a projectile, however, you will not cause a counter-hit even if you hit them out of the start-up of an attack.</p>
+
+<h2 id="Char">Invincibility</h2>
+
+<p>There are several different types of invincibility in this game. Five total, in fact; Strike, Projectile, Throw, Air, and Push. Some moves have one type of invincibility while others have mixes of all 5.</p>
+
+<h3>Strike Invincibility</h3>
+
+<p>While you have strike invincibility, you cannot be hit by anything that is considered a physical attack, such as normals or non-projectile special moves. You can still be hit by projectiles or throws though. A move that is strike invincible will color the hurtbox Orange in training mode (unless you also have projectile invincibility in which case the hurtbox will not be drawn).</p>
+
+<h3>Projectile Invincibility</h3>
+
+<p>While you have projectile invincibility, you cannot be hit by anything that is considered to be a projectile. You can still be hit by strikes or throws though. A move that is projectile invincible will color the hurtbox Purple in training mode (unless you also have projectile invincibility in which case the hurtbox will not be drawn).</p>
+
+<h3>Throw Invincibility</h3>
+
+<p>While you have throw invincibility, you cannot be hit by anything that is a throw, but can still be hit by strikes and projectiles. The green box will not be drawn in training mode while you have throw invincibility.</p>
+
+<h3>Air Crush</h3>
+
+<p>This is a special kind of invincibility; this move is only invincible to attacks that are considered airborne. Some moves designed as anti-airs have this property. You can still hit this move with any attack as long as that attack is not airborne. Moves that have air crush will have the hurtboxes colored Cyan in training mode.</p>
+
+<h3>Push invincibility</h3>
+
+<p>Usually when two characters are moving into each other, they will push each other around and cannot occupy the same space. If a move has push invincibility, it lets you pass through your opponent.</p>
+
+<h2 id="Char">Damage Scaling</h2>
+
+<p>Damage scaling is a pretty simple concept; the more attacks you do in a combo, the less damage those attacks do. It's a balance in place so that individual attacks can do big damage, but doing several strong attacks in a single combo won't result in a touch of death situation.</p>
+
+<p>In VGFC, the scaling is based on the number of moves performed in a combo, instead of the number of hits. So if you do a combo involving 3 moves, the resulting scaling will be the same regardless of how many hits you do. Dudley's Standing Heavy Punch, linked into another Standing Heavy Punch, cancelled into Heavy Machine-gun Blow, will be scaled the same as Ryu doing Standing Heavy Punch, linked into Crouching Heavy Punch and cancelled into Light Joudan Sokutogeri.</p>
+
+<p>The formula is as follows:</p>
+
+<p>Base Damage x 0.8 ^ (Moves Performed - 1)</p>
+
+<p>In addition to this formula, each move has a minimum damage scaling value; this value prevents the scaling on that move from going below a certain percentage. So, for example, Ryu's Standing Light Punch with a minimum scaling value of 10%, will never do less than 3 damage in a combo. Below is the minimum damage scaling for each move type:</p>
+
+<table class="DataTable">
+  <tr>
+    <th>Light/Medium/Heavy</th>
+    <th>10%</th>
+  </tr>
+  <tr>
+    <th>Special</th>
+    <th>20%</th>
+  </tr>
+  <tr>
+    <th>Supers (1 Bar)</th>
+    <th>30%</th>
+  </tr>
+  <tr>
+    <th>Ultras</th>
+    <th>40%</th>
+  </tr>
+  <tr>
+    <th>Supers (2 or 3 Bar)</th>
+    <th>50%</th>
+  </tr>
+</table>
+</div>

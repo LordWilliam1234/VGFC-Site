@@ -1,0 +1,70 @@
+<% provide(:title, "Mechanics") %>
+<div id="FighterPage">
+
+<p>In VGFC, you can select up to three different mechanics for your character. These vary widely and can greatly affect how you approach various match-ups. Below are descriptions of each of the different mechanics that you can select.</p>
+
+<h2 id="Char">Just Defend</h2>
+
+<p>Block a few frames before you get hit by an attack and you will perform a Just Defend. Just Defends cut down on the total time you are stuck in blockstun, cancels out chip damage, and gives you all the meter your opponent would have gained if you had simply blocked to move. In addition, it also restores a small amount of health as well as a small amount of your guard meter, and your guard/stun meters will immediately start draining.</p>
+
+<h2 id="Char">Parry</h2>
+
+<p>A harder to use and riskier option, but arguably more rewarding than Just Defend. Tap forward or down to attempt a parry; if you do this just before an attack connects, you will "parry" that attack; you will not enter any blockstun, you take no chip damage, and you will gain meter while the opponent gains none. Tapping forward will parry overhead and mid attacks, tapping down will parry low attacks.</p>
+
+<h2 id="Char">Dodge</h2>
+
+<p>Input <%= image_tag "info/left.png" %> + <%= image_tag "info/hp.png" %> + <%= image_tag "info/hk.png" %> to perform a dodge. Dodges are completely invincible for a short time to both strikes and throws, but you can be hit by projectiles. Press Heavy Punch and Heavy Kick during the dodge to perform a dodge attack: this cancels your invincibility, but dodge attacks are very fast and can be useful at knocking the opponent away. They do very little damage though.</p>
+
+<h2 id="Char">Roll</h2>
+
+<p>Input <%= image_tag "info/right.png" %> + <%= image_tag "info/hp.png" %> + <%= image_tag "info/hk.png" %> to perform a roll. Rolls are completely invincible to strikes and projectiles, but you can be thrown out of them. Towards the end of a role you lose your strike invincbility and can be hit by anything.</p>
+
+<h2 id="Char">X-Counter</h2>
+
+<p>When you block an attack, if you have at least one bar of meter, input <%= image_tag "info/right.png" %> + <%= image_tag "info/hp.png" %> + <%= image_tag "info/hk.png" %> to perform an X-counter. X-counters are identical to dodge attacks in their animation and speed, as well as their knockdownp roperties, but they do no damage and have invincibility until the end of their active frames. Useful for escaping pressure.</p>
+
+<h2 id="Char">X-Cancel</h2>
+
+<p>During an attack, input <%= image_tag "info/hp.png" %> + <%= image_tag "info/hk.png" %> at the same time to cancel that attack if you have at least one bar of meter. This is different from cancelling your moves normally as this allows you to cancel attacks that can't normally be cancelled. Good for pressure or for combos; however, if you perform an X-cancel during a combo, the damage scaling is immediately set to the equivalent of having performed 10 moves. In addition, you cannot perform an X-cancel if your attack can be used as an invincible reversal.</p>
+
+<h2 id="Char">Super Charge</h2>
+
+<p>Input and hold <%= image_tag "info/hp.png" %> + <%= image_tag "info/hk.png" %> to start performing a super charge. While charging, your meter will slowly build up. Release either button to cancel the super charge, which recovers instantly.</p>
+
+<h2 id="Char">Simple Inputs</h2>
+
+<p>Allows you to perform special moves by simply holding a direction and pressing a button. Unlike other mechanics, this takes up two "mechanic slots;" if you use Simple Inputs, you can only select one other mechanic alongside it. In addition, you cannot perform any of that character's command normals while Simple Inputs are being used.</p>
+
+<p>The command changes are as follows:</p>
+
+<table class="DataTable">
+  <tr>
+    <th>Original Command</th>
+    <th>Simple Command</th>
+  </tr>
+  <tr>
+    <th><%= image_tag "info/qcf.png" %></th>
+    <th><%= image_tag "info/right.png" %></th>
+  </tr>
+  <tr>
+    <th><%= image_tag "info/qcb.png" %></th>
+    <th><%= image_tag "info/left.png" %></th>
+  </tr>
+  <tr>
+    <th><%= image_tag "info/dp.png" %></th>
+    <th><%= image_tag "info/downright.png" %></th>
+  </tr>
+  <tr>
+    <th><%= image_tag "info/rdp.png" %></th>
+    <th><%= image_tag "info/downleft.png" %></th>
+  </tr>
+  <tr>
+    <th><%= image_tag "info/hcf.png" %></th>
+    <th><%= image_tag "info/upright.png" %></th>
+  </tr>
+  <tr>
+    <th><%= image_tag "info/hcb.png" %></th>
+    <th><%= image_tag "info/upleft.png" %></th>
+  </tr>
+</table>
+</div>

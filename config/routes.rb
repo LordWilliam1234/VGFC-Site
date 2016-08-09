@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   get 'basics' => 'characters#basics'
   get 'universal' => 'characters#universal'
   get 'elements' => 'main_pages#elements'
+  get 'mechanics' => 'main_pages#mechanics'
   get 'terms' => 'main_pages#terms'
   get 'ryu' => 'fighters#ryu'
   get 'kim' => 'fighters#kim'
